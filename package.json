@@ -1,0 +1,22 @@
+{
+  "name": "reactstunts",
+  "version": "1.0.0",
+  "description": "Testing it",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhilchowdary1918/ReactStunts.git"
+  },
+  "author": "Nikhil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhilchowdary1918/ReactStunts/issues"
+  },
+  "homepage": "https://github.com/nikhilchowdary1918/ReactStunts#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
