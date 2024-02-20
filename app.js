@@ -1,17 +1,21 @@
 import React from "react";
 import  ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-    React.createElement("div", { id: "child" }, [
-      React.createElement("h1", {}, "I'm an h1 tag"),
-      React.createElement("h2", {}, "I'm an h2 tag"),
-    ]),
-    React.createElement("div", { id: "child2" }, [
-      React.createElement("h1", {}, "I'm an h1 tag"),
-      React.createElement("h2", {}, "I'm an h2 tag"),
-    ]),
-  ])
-  console.log(parent);
-  const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+const func=()=>{
+  return <h1>hi nik</h1>
+}
+const Functionalcomponent=() =>{
+  return(
+  <div>
+  {func()}  
+  <h1 id="title" key="h1"> Hi for h1</h1>
+  <h2>hi for h2 </h2>
+  </div>
+  )
+} 
+ 
+  const root= ReactDOM.createRoot(document.getElementById("root"));
+
+
+root.render(<Functionalcomponent/>);
