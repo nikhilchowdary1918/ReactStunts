@@ -1,5 +1,5 @@
 .parcel-cache/
-
+.dist/
 node_modules/react-shimmer-effects/dist/index.js.map
 node_modules/react-shimmer-effects/dist/index.js
 node_modules/react-shimmer-effects/dist/index.es.js.map

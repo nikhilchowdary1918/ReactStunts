@@ -1,15 +1,15 @@
-import { resList } from "../Constants";
 import Restcard from "./Restcard";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
 
-function filterData(searchInput,restInput){
-  const filterData= restInput.filter((restaurant) => restaurant.data.name.includes(searchInput));
+function filterData(searchInput,allRest){
+  const filterData= allRest.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchInput.toLowerCase()));
   return filterData;
 }
 const Body= () =>{
-    const[restInput,setRestInput]=useState([])
+    const[allRest,setAllRest]=useState([])
     //restInput--Data in cards, setRestdata-- function that is created by useState hook to change the state of the data
+    const[filteredData,setFilteredData]=useState([])
     const[searchInput,setSearchInput]=useState("")
 
     useEffect(()=>{getRestfromapi();},[])
@@ -27,16 +27,17 @@ const Body= () =>{
         { 
           const resData = cardObj.card?.card?.gridElements?.infoWithStyle?.restaurants;
           console.log(resData)
-          setRestInput(resData)
-      //setRestInput(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+          setAllRest(resData)
+          setFilteredData(resData)
+      //setAllRest(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }}}
-    return(restInput.length === 0)? <Shimmer/> : (
+    return(allRest.length === 0)? <Shimmer/> : (
       <>
       <div className="search-container">
         <input 
         type="text" 
         className="input-search" 
-        placeholder="search" 
+        placeholder="search"  
         value={searchInput} 
         onChange={(e)=>{
           setSearchInput(e.target.value)
@@ -46,9 +47,9 @@ const Body= () =>{
         className="search-btn"
         onClick={() =>{
   
-          const data = filterData(searchInput,restInput);
+          const data = filterData(searchInput,allRest);
           //console.log(data)
-          setRestInput(data);
+          setFilteredData(data);
         } }
         
         >search</button>
@@ -56,7 +57,7 @@ const Body= () =>{
       </div>
       <div className="restcard">
       {
-        restInput.map((restaurant) => (
+        filteredData.map((restaurant) => (
         restaurant.info ? <Restcard {...restaurant.info} key={restaurant.info.id}/> : null
         ))
       }
