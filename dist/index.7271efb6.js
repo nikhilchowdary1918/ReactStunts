@@ -2962,23 +2962,29 @@ var _about = require("./components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _errorPage = require("./components/ErrorPage");
 var _errorPageDefault = parcelHelpers.interopDefault(_errorPage);
+var _contact = require("./components/Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _restaurantMenu = require("./components/RestaurantMenu");
+var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
+var _profile = require("./components/Profile");
+var _profileDefault = parcelHelpers.interopDefault(_profile);
 var _reactRouterDom = require("react-router-dom");
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 11,
+                lineNumber: 14,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 12,
+                lineNumber: 15,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 13,
+                lineNumber: 16,
                 columnNumber: 5
             }, undefined)
         ]
@@ -2990,22 +2996,58 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 18,
+            lineNumber: 21,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorPageDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 19,
-            columnNumber: 17
-        }, undefined)
-    },
-    {
-        path: "/About",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
             lineNumber: 22,
-            columnNumber: 12
-        }, undefined)
+            columnNumber: 17
+        }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 25,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 28,
+                    columnNumber: 14
+                }, undefined),
+                children: [
+                    {
+                        path: "profile",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 31,
+                            columnNumber: 16
+                        }, undefined)
+                    }
+                ]
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 35,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/restmenu/:resid",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 38,
+                    columnNumber: 14
+                }, undefined)
+            }
+        ]
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
@@ -3013,7 +3055,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 25,
+    lineNumber: 42,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3024,7 +3066,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","./components/About":"9R1Eu","./components/ErrorPage":"8FX8S","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","./components/About":"9R1Eu","./components/ErrorPage":"8FX8S","./components/Contact":"cgAOG","./components/RestaurantMenu":"8PuJ6","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Profile":"h0rtF"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27221,9 +27263,9 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
 var _logoPng = require("../logo.png");
 var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
+var _reactRouterDom = require("react-router-dom");
 const Title = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
@@ -27257,32 +27299,60 @@ const Header = ()=>{
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: "Home"
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                    to: "/",
+                                    children: "Home"
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 16,
+                                    columnNumber: 13
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 15,
-                                columnNumber: 13
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: "About US"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 16,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: "Contact"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 17,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: "Cart"
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                    to: "/about",
+                                    children: "About US"
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 19,
+                                    columnNumber: 13
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 18,
-                                columnNumber: 13
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                    to: "/contact",
+                                    children: "Contact"
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 22,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 21,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                    to: "/cart",
+                                    children: "Cart"
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 24,
+                                    columnNumber: 11
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 23,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
@@ -27314,7 +27384,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../logo.png":"kyT8c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kyT8c":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../logo.png":"kyT8c","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kyT8c":[function(require,module,exports) {
 module.exports = require("66f729201ceed9ca").getBundleURL("aXMci") + "logo.e281644b.png" + "?" + Date.now();
 
 },{"66f729201ceed9ca":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -27352,4146 +27422,7 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _restcard = require("./Restcard");
-var _restcardDefault = parcelHelpers.interopDefault(_restcard);
-var _shimmer = require("./Shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _s = $RefreshSig$();
-function filterData(searchInput, allRest) {
-    const filterData = allRest.filter((restaurant)=>restaurant.info.name.toLowerCase().includes(searchInput.toLowerCase()));
-    return filterData;
-}
-const Body = ()=>{
-    _s();
-    const [allRest, setAllRest] = (0, _react.useState)([]);
-    //restInput--Data in cards, setRestdata-- function that is created by useState hook to change the state of the data
-    const [filteredData, setFilteredData] = (0, _react.useState)([]);
-    const [searchInput, setSearchInput] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        getRestfromapi();
-    }, []);
-    //useEffect(()=>{console.log("use effect is called")},[searchInput]) example of useeffect when searchinput is changed
-    //useEffect(()=>{console.log("use effect is called")},[]) If dependancy array is empty ,it is called only once
-    async function getRestfromapi() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622536&lng=77.6979885&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        console.log(json);
-        const arrayOfCards = json.data.cards;
-        const restaurant_list = "restaurant_grid_listing";
-        for (const cardObj of arrayOfCards)if (cardObj.card.card && cardObj.card.card.id === restaurant_list) {
-            const resData = cardObj.card?.card?.gridElements?.infoWithStyle?.restaurants;
-            console.log(resData);
-            setAllRest(resData);
-            setFilteredData(resData);
-        //setAllRest(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        }
-    }
-    return allRest.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 35,
-        columnNumber: 33
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "input-search",
-                        placeholder: "search",
-                        value: searchInput,
-                        onChange: (e)=>{
-                            setSearchInput(e.target.value);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 37,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "search-btn",
-                        onClick: ()=>{
-                            const data = filterData(searchInput, allRest);
-                            //console.log(data)
-                            setFilteredData(data);
-                        },
-                        children: "search"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 40,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 36,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restcard",
-                children: filteredData.map((restaurant)=>restaurant.info ? /*#__PURE__*/ (0, _react.createElement)((0, _restcardDefault.default), {
-                        ...restaurant.info,
-                        key: restaurant.info.id,
-                        __source: {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 48,
-                            columnNumber: 57
-                        },
-                        __self: undefined
-                    }) : null)
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 47,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Body, "6xck13W08xWV5LOafBJZV/7Xetg=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Restcard":"3vklx","./Shimmer":"g6ZGj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3vklx":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$06a9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$06a9.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _constants = require("../Constants");
-const Restcard = ({ cloudinaryImageId, name, cuisines, lastMileTravel })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _constants.CDN_URL) + cloudinaryImageId
-            }, void 0, false, {
-                fileName: "src/components/Restcard.js",
-                lineNumber: 9,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/Restcard.js",
-                lineNumber: 10,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines.join(", ")
-            }, void 0, false, {
-                fileName: "src/components/Restcard.js",
-                lineNumber: 11,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    lastMileTravel,
-                    " Miles away"
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Restcard.js",
-                lineNumber: 12,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Restcard.js",
-        lineNumber: 8,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Restcard;
-exports.default = Restcard;
-var _c;
-$RefreshReg$(_c, "Restcard");
-
-  $parcel$ReactRefreshHelpers$06a9.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../Constants":"cGB5A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cGB5A":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
-parcelHelpers.export(exports, "resList", ()=>resList);
-const CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const resList = [
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "334475",
-            name: "KFC",
-            uuid: "eaed0e3b-7c0e-4367-8f59-f41d309fb93a",
-            city: "1",
-            area: "BTM Layout",
-            totalRatingsString: "500+ ratings",
-            cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-            cuisines: [
-                "Burgers",
-                "Biryani",
-                "American",
-                "Snacks",
-                "Fast Food"
-            ],
-            tags: [],
-            costForTwo: 40000,
-            costForTwoString: "\u20B9400 FOR TWO",
-            deliveryTime: 36,
-            minDeliveryTime: 36,
-            maxDeliveryTime: 36,
-            slaString: "36 MINS",
-            lastMileTravel: 3.5,
-            slugs: {
-                restaurant: "kfc-btm-layout-btm",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "KFC restaurants, 942,SV Tower, 16th Main, BTM 2nd Stage ,560076",
-            locality: "2nd Stage",
-            parentId: 547,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6109309~p=1~eid=00000186-a341-249f-05e6-09c500910178",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "3.5 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "334475",
-                deliveryTime: 36,
-                minDeliveryTime: 36,
-                maxDeliveryTime: 36,
-                lastMileTravel: 3.5,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "3.8",
-            totalRatings: 500,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "229",
-            name: "Meghana Foods",
-            uuid: "4fdd19e2-5d0f-4bde-9c7f-dc3e8d36021f",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "xqwpuhgnsaf18te7zvtv",
-            cuisines: [
-                "Biryani",
-                "Andhra",
-                "South Indian",
-                "North Indian",
-                "Chinese",
-                "Seafood"
-            ],
-            tags: [],
-            costForTwo: 50000,
-            costForTwoString: "\u20B9500 FOR TWO",
-            deliveryTime: 29,
-            minDeliveryTime: 29,
-            maxDeliveryTime: 29,
-            slaString: "29 MINS",
-            lastMileTravel: 1.399999976158142,
-            slugs: {
-                restaurant: "meghana-foods-5th-block-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "124, Near Jyothi Nivas College, 1st Cross, KHB Colony, Koramangala 5th Block, Bangalore",
-            locality: "5th Block",
-            parentId: 635,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.3 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "229",
-                deliveryTime: 29,
-                minDeliveryTime: 29,
-                maxDeliveryTime: 29,
-                lastMileTravel: 1.399999976158142,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.4",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "121603",
-            name: "Kannur Food Point",
-            uuid: "51983905-e698-4e31-b0d7-e376eca56320",
-            city: "1",
-            area: "Tavarekere",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "bmwn4n4bn6n1tcpc8x2h",
-            cuisines: [
-                "Kerala",
-                "Chinese"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "\u20B9300 FOR TWO",
-            deliveryTime: 31,
-            minDeliveryTime: 31,
-            maxDeliveryTime: 31,
-            slaString: "31 MINS",
-            lastMileTravel: 3,
-            slugs: {
-                restaurant: "kannur-food-point-btm",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "6/21,9TH CROSS ,1ST MAIN, VENKATESHWARA LAYOUT,SG PALYA, BENGALURU, - 560093",
-            locality: "SG Palya",
-            parentId: 20974,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "50% off on all orders",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "50% off on all orders",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "50% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "50% off on all orders",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "3 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "121603",
-                deliveryTime: 31,
-                minDeliveryTime: 31,
-                maxDeliveryTime: 31,
-                lastMileTravel: 3,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.8",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "307050",
-            name: "Call Me Chow",
-            uuid: "b9bf2a17-faf9-4e4a-a6a7-61197d4bafa0",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "soegobqsiqvhmkfvnnkj",
-            cuisines: [
-                "Chinese",
-                "Pan-Asian"
-            ],
-            tags: [],
-            costForTwo: 40000,
-            costForTwoString: "\u20B9400 FOR TWO",
-            deliveryTime: 29,
-            minDeliveryTime: 29,
-            maxDeliveryTime: 29,
-            slaString: "29 MINS",
-            lastMileTravel: 1.5,
-            slugs: {
-                restaurant: "call-me-chow-koramangala-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "Call Me Chow, No. 364/A, Ground Floor, 3rd Cross, VSR Layout, Koramangala 8th Block, Bengaluru, Karnataka - 560095",
-            locality: "8th Block",
-            parentId: 18560,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "40% off",
-                shortDescriptionList: [
-                    {
-                        meta: "40% off | Use SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "40% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6108301~p=4~eid=00000186-a341-249f-05e6-09c600910432",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.5 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "307050",
-                deliveryTime: 29,
-                minDeliveryTime: 29,
-                maxDeliveryTime: 29,
-                lastMileTravel: 1.5,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "4.3",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "337335",
-            name: "Kannur food kitchen",
-            uuid: "c70b61bc-0f68-4e24-996b-749fbf295c35",
-            city: "1",
-            area: "BTM Layout",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "a27weqanhnszqiuzsoik",
-            cuisines: [
-                "Kerala",
-                "Biryani",
-                "Beverages"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "\u20B9200 FOR TWO",
-            deliveryTime: 30,
-            minDeliveryTime: 30,
-            maxDeliveryTime: 30,
-            slaString: "30 MINS",
-            lastMileTravel: 2.5,
-            slugs: {
-                restaurant: "kannur-food-kitchen-btm-btm",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "kannur food point, Chocolate Factory Road, Tavarekere, Cashier Layout, 1st Stage, BTM Layout, thavrakharea, Karnataka, India",
-            locality: "1st  Stage",
-            parentId: 114756,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "50% off on all orders",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "50% off on all orders",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "50% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "50% off on all orders",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.5 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "337335",
-                deliveryTime: 30,
-                minDeliveryTime: 30,
-                maxDeliveryTime: 30,
-                lastMileTravel: 2.5,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.8",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "492159",
-            name: "Roti Wala",
-            uuid: "ada41f9b-cca3-4197-805c-8c43798919e9",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "100+ ratings",
-            cloudinaryImageId: "f99d05e4f7884caa8646c70b0b752c7a",
-            cuisines: [
-                "Home Food",
-                "North Indian",
-                "Thalis"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "\u20B9200 FOR TWO",
-            deliveryTime: 36,
-            minDeliveryTime: 36,
-            maxDeliveryTime: 36,
-            slaString: "36 MINS",
-            lastMileTravel: 1,
-            slugs: {
-                restaurant: "new-roti-wala-koramangala-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "No 18 ,MIG, KHB Colony, 5th Block, Koramangala, Bengaluru, Karnataka 560095, India",
-            locality: "5th Block",
-            parentId: 171678,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "20% off",
-                shortDescriptionList: [
-                    {
-                        meta: "20% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "20% off up to \u20B950 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "20% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "20% off up to \u20B950 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "492159",
-                deliveryTime: 36,
-                minDeliveryTime: 36,
-                maxDeliveryTime: 36,
-                lastMileTravel: 1,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.1",
-            totalRatings: 100,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "65797",
-            name: "Leon's - Burgers & Wings (Leon Grill)",
-            uuid: "b5747bab-748b-4f2d-8856-25cd9a49efb3",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "r4ufflqojich0r29efvc",
-            cuisines: [
-                "American",
-                "Snacks",
-                "Turkish",
-                "Portuguese",
-                "Continental"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "\u20B9300 FOR TWO",
-            deliveryTime: 29,
-            minDeliveryTime: 29,
-            maxDeliveryTime: 29,
-            slaString: "29 MINS",
-            lastMileTravel: 1.2999999523162842,
-            slugs: {
-                restaurant: "leon-grill-koramangala-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "Plot No.123 K.H.B Colony, 5th Block , Koramangala , Bangalore -95",
-            locality: "KHB Colony",
-            parentId: 371281,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "40% off",
-                shortDescriptionList: [
-                    {
-                        meta: "40% off | Use SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "40% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6067111~p=7~eid=00000186-a341-249f-05e6-09c70091073f",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.2 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "65797",
-                deliveryTime: 29,
-                minDeliveryTime: 29,
-                maxDeliveryTime: 29,
-                lastMileTravel: 1.2999999523162842,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "4.3",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "425",
-            name: "Hotel Empire",
-            uuid: "c0c37758-2e83-4429-aad6-eb94debb48f5",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "un4omn7rcunkmlw6vikr",
-            cuisines: [
-                "North Indian",
-                "Kebabs",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 45000,
-            costForTwoString: "\u20B9450 FOR TWO",
-            deliveryTime: 30,
-            minDeliveryTime: 30,
-            maxDeliveryTime: 30,
-            slaString: "30 MINS",
-            lastMileTravel: 1.2999999523162842,
-            slugs: {
-                restaurant: "hotel-empire-5th-block-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "103, Industrial Area, 5th Block, Near Jyothi Nivas College, Koramangala 5th Block, Bangalore",
-            locality: "Koramangala",
-            parentId: 475,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "10% off",
-                shortDescriptionList: [
-                    {
-                        meta: "10% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off up to \u20B940 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "10% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off up to \u20B940 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.2 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "425",
-                deliveryTime: 30,
-                minDeliveryTime: 30,
-                maxDeliveryTime: 30,
-                lastMileTravel: 1.2999999523162842,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.1",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "428",
-            name: "Biryani Pot",
-            uuid: "6db20a8b-dd85-4148-b750-107169f7f826",
-            city: "1",
-            area: "Btm Layout",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "mdipoyzfzsa7n7igskht",
-            cuisines: [
-                "North Indian",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 50000,
-            costForTwoString: "\u20B9500 FOR TWO",
-            deliveryTime: 25,
-            minDeliveryTime: 25,
-            maxDeliveryTime: 25,
-            slaString: "25 MINS",
-            lastMileTravel: 1.899999976158142,
-            slugs: {
-                restaurant: "biryani-pot-madiwala-junction-btm",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "14th  Cross, 4th link Road Maruthi Nagar Madiwala Bangalore 68",
-            locality: "Maruti Nagar",
-            parentId: 21798,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "20% off",
-                shortDescriptionList: [
-                    {
-                        meta: "20% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "20% off up to \u20B950 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "20% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "20% off up to \u20B950 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "428",
-                deliveryTime: 25,
-                minDeliveryTime: 25,
-                maxDeliveryTime: 25,
-                lastMileTravel: 1.899999976158142,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.8",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "306639",
-            name: "The Coorg Food Co.",
-            uuid: "318c2c99-1173-42a8-b56c-f655e3cc5ffd",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "100+ ratings",
-            cloudinaryImageId: "ej90ytd5x7ffyl6ii7cn",
-            cuisines: [
-                "South Indian"
-            ],
-            tags: [],
-            costForTwo: 75000,
-            costForTwoString: "\u20B9750 FOR TWO",
-            deliveryTime: 28,
-            minDeliveryTime: 28,
-            maxDeliveryTime: 28,
-            slaString: "28 MINS",
-            lastMileTravel: 0.800000011920929,
-            slugs: {
-                restaurant: "the-coorg-food-co.-koramangala-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "No 466, Ground floor shop, 17th G main, 6th block, 80 feet road, opp BMTC Bus Depot, Koramangala, Bangalore",
-            locality: "6th Block",
-            parentId: 207214,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: "Closes soon"
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6092919~p=10~eid=00000186-a341-249f-05e6-09c800910a41",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "306639",
-                deliveryTime: 28,
-                minDeliveryTime: 28,
-                maxDeliveryTime: 28,
-                lastMileTravel: 0.800000011920929,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "4.3",
-            totalRatings: 100,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "63957",
-            name: "Madeena Hotel",
-            uuid: "da15d34a-cf0f-40a6-8600-096309bb578b",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "yc0asfa2j9elggstyjg4",
-            cuisines: [
-                "Biryani",
-                "Mughlai",
-                "Indian",
-                "Beverages"
-            ],
-            tags: [],
-            costForTwo: 25000,
-            costForTwoString: "\u20B9250 FOR TWO",
-            deliveryTime: 29,
-            minDeliveryTime: 29,
-            maxDeliveryTime: 29,
-            slaString: "29 MINS",
-            lastMileTravel: 1.399999976158142,
-            slugs: {
-                restaurant: "madeena-hotel-koramangala-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "# 20/A, 5th Block Kormangala ,Next To Masjid-E-Mamoor Banglore-95",
-            locality: "5th Block",
-            parentId: 12517,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.3 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "63957",
-                deliveryTime: 29,
-                minDeliveryTime: 29,
-                maxDeliveryTime: 29,
-                lastMileTravel: 1.399999976158142,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.1",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "71298",
-            name: "Bengali Fun Foods",
-            uuid: "a697d14f-c13a-49cb-8414-d12fa56bcc3b",
-            city: "1",
-            area: "BTM Layout",
-            totalRatingsString: "500+ ratings",
-            cloudinaryImageId: "ub9ng9le0lf7opxxbxey",
-            cuisines: [
-                "North Indian"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "\u20B9300 FOR TWO",
-            deliveryTime: 27,
-            minDeliveryTime: 27,
-            maxDeliveryTime: 27,
-            slaString: "27 MINS",
-            lastMileTravel: 2.700000047683716,
-            slugs: {
-                restaurant: "bengali-fun-foods-btm-btm",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "No 66 35th main outer ring road BTM 2nd stage beside central silk board Bangalore 5600076",
-            locality: "2nd Stage",
-            parentId: 2600,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "30% off",
-                shortDescriptionList: [
-                    {
-                        meta: "30% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "30% off up to \u20B975 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "30% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "30% off up to \u20B975 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6090726~p=13~eid=00000186-a341-249f-05e6-09c900910d3a",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.7 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "71298",
-                deliveryTime: 27,
-                minDeliveryTime: 27,
-                maxDeliveryTime: 27,
-                lastMileTravel: 2.700000047683716,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "4.3",
-            totalRatings: 500,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "59593",
-            name: "Al Daaz",
-            uuid: "c189b92c-d842-4595-9a1f-ff85bd67bc2a",
-            city: "1",
-            area: "Hsr Layout",
-            totalRatingsString: "100+ ratings",
-            cloudinaryImageId: "rxsvhvcdip9dbfdijzk9",
-            cuisines: [
-                "American",
-                "Arabian",
-                "Chinese",
-                "Desserts",
-                "Mughlai",
-                "North Indian"
-            ],
-            tags: [],
-            costForTwo: 40000,
-            costForTwoString: "\u20B9400 FOR TWO",
-            deliveryTime: 40,
-            minDeliveryTime: 40,
-            maxDeliveryTime: 40,
-            slaString: "40 MINS",
-            lastMileTravel: 4.400000095367432,
-            slugs: {
-                restaurant: "al-daaz-hsr-hsr",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "#64 & 65, 27th Main Rd, 1st Sector HSR Layout - 560102",
-            locality: "HSR",
-            parentId: 21640,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "4.4 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "59593",
-                deliveryTime: 40,
-                minDeliveryTime: 40,
-                maxDeliveryTime: 40,
-                lastMileTravel: 4.400000095367432,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.3",
-            totalRatings: 100,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "5934",
-            name: "Burger King",
-            uuid: "ac56f2ac-71d3-4978-9513-b3aa68e25463",
-            city: "1",
-            area: "Koramangala",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "jpohkfkofao0hxez7vdh",
-            cuisines: [
-                "Burgers",
-                "American"
-            ],
-            tags: [],
-            costForTwo: 35000,
-            costForTwoString: "\u20B9350 FOR TWO",
-            deliveryTime: 31,
-            minDeliveryTime: 31,
-            maxDeliveryTime: 31,
-            slaString: "31 MINS",
-            lastMileTravel: 1.399999976158142,
-            slugs: {
-                restaurant: "burger-king-koramangala",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "Unit No. 1, Davar Atrium, Corporation No. 118, Koramangala Industrial Area 7th Block, Bangalore 560095",
-            locality: "7th Block",
-            parentId: 166,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "Get every item under 129",
-                shortDescriptionList: [
-                    {
-                        meta: "Get every item under 129",
-                        discountType: "FinalPrice",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "Get every item under 129",
-                        discountType: "FinalPrice",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "",
-                        discountType: "FinalPrice",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "Get every item under 129",
-                        discountType: "FinalPrice",
-                        operationType: "RESTAURANT"
-                    },
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.3 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "5934",
-                deliveryTime: 31,
-                minDeliveryTime: 31,
-                maxDeliveryTime: 31,
-                lastMileTravel: 1.399999976158142,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.2",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "365010",
-            name: "Hotel Salam",
-            uuid: "0a29b957-8817-4d4c-bc32-ca009921472d",
-            city: "1",
-            area: "Bommanahalli",
-            totalRatingsString: "500+ ratings",
-            cloudinaryImageId: "hgdmw8uwgewhiewwovjh",
-            cuisines: [
-                "Biryani",
-                "Tandoor",
-                "Arabian",
-                "Indian",
-                "Beverages"
-            ],
-            tags: [],
-            costForTwo: 25000,
-            costForTwoString: "\u20B9250 FOR TWO",
-            deliveryTime: 31,
-            minDeliveryTime: 31,
-            maxDeliveryTime: 31,
-            slaString: "31 MINS",
-            lastMileTravel: 4.699999809265137,
-            slugs: {
-                restaurant: "hotel-salam-hsr-hsr",
-                city: "bangalore"
-            },
-            cityState: "1",
-            address: "43/1,OPP.Salarpuria Serenity ,M G Palya Main Road, Bangalore-560068",
-            locality: "M G Palya",
-            parentId: 101873,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FLAT100 off",
-                shortDescriptionList: [
-                    {
-                        meta: "FLAT100 off | Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FLAT100 off | Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "\u20B9100 OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FLAT100 off | Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "4.6 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "365010",
-                deliveryTime: 31,
-                minDeliveryTime: 31,
-                maxDeliveryTime: 31,
-                lastMileTravel: 4.699999809265137,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.9",
-            totalRatings: 500,
-            new: false
-        },
-        subtype: "basic"
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0b04.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactShimmerEffects = require("react-shimmer-effects");
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactShimmerEffects.ShimmerSimpleGallery), {
-            card: true,
-            imageHeight: 300
-        }, void 0, false, {
-            fileName: "src/components/Shimmer.js",
-            lineNumber: 5,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$0b04.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-shimmer-effects":"5ORgO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5ORgO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ShimmerButton", ()=>ShimmerButton);
-parcelHelpers.export(exports, "ShimmerCircularImage", ()=>ShimmerCircularImage);
-parcelHelpers.export(exports, "ShimmerThumbnail", ()=>ShimmerThumbnail);
-parcelHelpers.export(exports, "ShimmerCard", ()=>ShimmerCard);
-parcelHelpers.export(exports, "ShimmerSimpleGallery", ()=>ShimmerSimpleGallery);
-parcelHelpers.export(exports, "ShimmerFeaturedGallery", ()=>ShimmerFeaturedGallery);
-parcelHelpers.export(exports, "ShimmerTable", ()=>ShimmerTable);
-parcelHelpers.export(exports, "ShimmerTableCol", ()=>ShimmerTableCol);
-parcelHelpers.export(exports, "ShimmerTableRow", ()=>ShimmerTableRow);
-parcelHelpers.export(exports, "ShimmerBadge", ()=>ShimmerBadge);
-parcelHelpers.export(exports, "ShimmerText", ()=>ShimmerText);
-parcelHelpers.export(exports, "ShimmerTitle", ()=>ShimmerTitle);
-parcelHelpers.export(exports, "ShimmerSocialPost", ()=>ShimmerSocialPost);
-parcelHelpers.export(exports, "ShimmerSeparator", ()=>ShimmerSeparator);
-parcelHelpers.export(exports, "ShimmerCategoryItem", ()=>ShimmerCategoryItem);
-parcelHelpers.export(exports, "ShimmerCategoryList", ()=>ShimmerCategoryList);
-parcelHelpers.export(exports, "ShimmerPostItem", ()=>ShimmerPostItem);
-parcelHelpers.export(exports, "ShimmerPostDetails", ()=>ShimmerPostDetails);
-parcelHelpers.export(exports, "ShimmerPostList", ()=>ShimmerPostList);
-parcelHelpers.export(exports, "ShimmerContentBlock", ()=>ShimmerContentBlock);
-parcelHelpers.export(exports, "ShimmerSectionHeader", ()=>ShimmerSectionHeader);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-function createCommonjsModule(fn, module) {
-    return module = {
-        exports: {}
-    }, fn(module, module.exports), module.exports;
-}
-var classnames = createCommonjsModule(function(module) {
-    /*!
-  Copyright (c) 2018 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/ /* global define */ (function() {
-        var hasOwn = {}.hasOwnProperty;
-        function classNames() {
-            var classes = [];
-            for(var i = 0; i < arguments.length; i++){
-                var arg = arguments[i];
-                if (!arg) continue;
-                var argType = typeof arg;
-                if (argType === "string" || argType === "number") classes.push(arg);
-                else if (Array.isArray(arg)) {
-                    if (arg.length) {
-                        var inner = classNames.apply(null, arg);
-                        if (inner) classes.push(inner);
-                    }
-                } else if (argType === "object") {
-                    if (arg.toString === Object.prototype.toString) {
-                        for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
-                    } else classes.push(arg.toString());
-                }
-            }
-            return classes.join(" ");
-        }
-        if (module.exports) {
-            classNames.default = classNames;
-            module.exports = classNames;
-        } else window.classNames = classNames;
-    })();
-});
-function styleInject(css, ref) {
-    if (ref === void 0) ref = {};
-    var insertAt = ref.insertAt;
-    if (!css || typeof document === "undefined") return;
-    var head = document.head || document.getElementsByTagName("head")[0];
-    var style = document.createElement("style");
-    style.type = "text/css";
-    if (insertAt === "top") {
-        if (head.firstChild) head.insertBefore(style, head.firstChild);
-        else head.appendChild(style);
-    } else head.appendChild(style);
-    if (style.styleSheet) style.styleSheet.cssText = css;
-    else style.appendChild(document.createTextNode(css));
-}
-var css = ".shimmer-button {\n  border-radius: 4px;\n  height: 38px;\n  width: 120px;\n  margin-bottom: 20px; }\n  .shimmer-button--sm {\n    border-radius: 3px;\n    height: 31px;\n    width: 100px; }\n  .shimmer-button--lg {\n    height: 48px;\n    width: 140px;\n    border-radius: 5px; }\n";
-styleInject(css);
-var defineProperty = function(obj, key, value) {
-    if (key in obj) Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-    });
-    else obj[key] = value;
-    return obj;
-};
-var ShimmerButton = function ShimmerButton(_ref) {
-    var size = _ref.size;
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames(defineProperty({
-            "shimmer shimmer-button": true
-        }, "shimmer-button--" + size, true))
-    });
-};
-ShimmerButton.propTypes = {
-    size: (0, _propTypesDefault.default).oneOf([
-        "lg",
-        "md",
-        "sm"
-    ])
-};
-ShimmerButton.defaultProps = {
-    size: "md"
-};
-var ShimmerCircularImage = function ShimmerCircularImage(_ref) {
-    var size = _ref.size, center = _ref.center, className = _ref.className;
-    var style = {};
-    if (size) {
-        style.width = size + "px";
-        style.height = size + "px";
-    }
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames({
-            "text-center": center
-        })
-    }, (0, _reactDefault.default).createElement("div", {
-        style: style,
-        className: classnames(defineProperty({
-            "shimmer shimmer-avatar": true
-        }, className, className))
-    }));
-};
-ShimmerCircularImage.propTypes = {
-    size: (0, _propTypesDefault.default).number,
-    center: (0, _propTypesDefault.default).bool,
-    className: (0, _propTypesDefault.default).string
-};
-ShimmerCircularImage.defaultProps = {
-    center: false,
-    size: 80
-};
-var ShimmerThumbnail = function ShimmerThumbnail(_ref) {
-    var height = _ref.height, width = _ref.width, center = _ref.center, className = _ref.className, fitOnFrame = _ref.fitOnFrame, rounded = _ref.rounded;
-    var style = {};
-    if (height) style.height = height + "px";
-    if (width) style.width = width + "px";
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames({
-            "h-100": fitOnFrame,
-            "text-center ": center
-        })
-    }, (0, _reactDefault.default).createElement("div", {
-        className: classnames(defineProperty({
-            "h-100": fitOnFrame,
-            "shimmer shimmer-thumbnail": true,
-            "border-rounded": rounded
-        }, className, className)),
-        style: style
-    }));
-};
-ShimmerThumbnail.propTypes = {
-    height: (0, _propTypesDefault.default).number,
-    width: (0, _propTypesDefault.default).number,
-    center: (0, _propTypesDefault.default).bool,
-    className: (0, _propTypesDefault.default).string,
-    fitOnFrame: (0, _propTypesDefault.default).bool,
-    rounded: (0, _propTypesDefault.default).bool
-};
-ShimmerThumbnail.defaultProps = {
-    canter: false,
-    fitOnFrame: false,
-    rounded: false,
-    height: 250
-};
-var css$1 = ".shimmer-avatar {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  margin-bottom: 20px;\n  display: inline-block; }\n\n.shimmer-thumbnail {\n  min-width: 80px;\n  width: 100%;\n  height: 200px;\n  margin-bottom: 20px;\n  display: inline-block; }\n";
-styleInject(css$1);
-var css$2 = ".shimmer-title {\n  margin-bottom: 20px; }\n  .shimmer-title--secondary {\n    margin-bottom: 20px; }\n    .shimmer-title--secondary .shimmer-title-line {\n      height: 16px; }\n  .shimmer-title-line {\n    width: 100%;\n    height: 24px;\n    border-radius: 20px; }\n    .shimmer-title-line:first-child {\n      width: 100% !important; }\n    .shimmer-title-line:last-child {\n      width: 40%; }\n";
-styleInject(css$2);
-var ShimmerTitle = function ShimmerTitle(_ref) {
-    var _classNames;
-    var line = _ref.line, gap = _ref.gap, variant = _ref.variant, className = _ref.className;
-    var renderLines = function renderLines() {
-        var title_lines = [];
-        for(var index = 0; index < line; index++)title_lines.push((0, _reactDefault.default).createElement("div", {
-            className: "shimmer shimmer-title-line",
-            key: index
-        }));
-        return title_lines;
-    };
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames((_classNames = {
-            grid: true,
-            "shimmer-title": variant === "primary",
-            "shimmer-title--secondary": variant === "secondary"
-        }, defineProperty(_classNames, "grid-gap-" + gap, gap), defineProperty(_classNames, className, className), _classNames))
-    }, renderLines());
-};
-ShimmerTitle.propTypes = {
-    line: (0, _propTypesDefault.default).number,
-    gap: (0, _propTypesDefault.default).oneOf([
-        10,
-        15,
-        20,
-        30
-    ]),
-    variant: (0, _propTypesDefault.default).oneOf([
-        "primary",
-        "secondary"
-    ]),
-    className: (0, _propTypesDefault.default).string
-};
-ShimmerTitle.defaultProps = {
-    line: 2,
-    gap: 10,
-    variant: "primary"
-};
-var css$3 = ".shimmer-card {\n  border-radius: 8px;\n  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);\n  background-color: #ffffff;\n  width: 100%; }\n  .shimmer-card:not(:first-child) {\n    margin-top: 30px; }\n  .shimmer-card--content-center {\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    .shimmer-card--content-center * {\n      width: 100%;\n      margin: auto; }\n";
-styleInject(css$3);
-var ShimmerCard = function ShimmerCard(_ref) {
-    var _classNames;
-    var children = _ref.children, className = _ref.className, paddingSize = _ref.paddingSize;
-    if (!children) return null;
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames((_classNames = {
-            "shimmer-card": true
-        }, defineProperty(_classNames, "p-" + paddingSize, paddingSize), defineProperty(_classNames, className, className), _classNames))
-    }, children);
-};
-ShimmerCard.propTypes = {
-    className: (0, _propTypesDefault.default).string,
-    children: (0, _propTypesDefault.default).oneOfType([
-        (0, _propTypesDefault.default).element,
-        (0, _propTypesDefault.default).array
-    ]).isRequired,
-    paddingSize: (0, _propTypesDefault.default).oneOf([
-        false,
-        20,
-        30
-    ])
-};
-ShimmerCard.defaultProps = {
-    paddingSize: false
-};
-var ShimmerSimpleGallery = function ShimmerSimpleGallery(_ref) {
-    var _classNames, _classNames2;
-    var row = _ref.row, col = _ref.col, gap = _ref.gap, className = _ref.className, fitOnFrame = _ref.fitOnFrame, imageType = _ref.imageType, imageHeight = _ref.imageHeight, caption = _ref.caption, card = _ref.card;
-    var renderPhotos = function renderPhotos() {
-        var photos = [];
-        var items = row * col;
-        for(var index = 0; index < items; index++)photos.push((0, _reactDefault.default).createElement("div", {
-            key: index
-        }, imageType === "thumbnail" && (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-            key: index,
-            fitOnFrame: fitOnFrame,
-            height: imageHeight,
-            className: classnames({
-                "m-0": true
-            })
-        }), imageType === "circular" && (0, _reactDefault.default).createElement(ShimmerCircularImage, {
-            size: imageHeight,
-            center: true
-        }), caption && (0, _reactDefault.default).createElement(ShimmerTitle, {
-            variant: "secondary",
-            className: classnames({
-                "mt-15": imageType === "thumbnail",
-                "w-50 ml-auto mr-auto circular-image-caption": imageType === "circular"
-            })
-        })));
-        return photos;
-    };
-    if (!card) return (0, _reactDefault.default).createElement("div", {
-        className: classnames((_classNames = {
-            grid: true
-        }, defineProperty(_classNames, "grid-gap-" + gap, true), defineProperty(_classNames, "grid-column-" + col, true), defineProperty(_classNames, className, className), _classNames))
-    }, renderPhotos());
-    return (0, _reactDefault.default).createElement(ShimmerCard, {
-        paddingSize: 20
-    }, (0, _reactDefault.default).createElement("div", {
-        className: classnames((_classNames2 = {
-            grid: true
-        }, defineProperty(_classNames2, "grid-gap-" + gap, true), defineProperty(_classNames2, "grid-column-" + col, true), defineProperty(_classNames2, className, className), _classNames2))
-    }, renderPhotos()));
-};
-ShimmerSimpleGallery.propTypes = {
-    row: (0, _propTypesDefault.default).number,
-    col: (0, _propTypesDefault.default).oneOf([
-        2,
-        3,
-        4
-    ]),
-    gap: (0, _propTypesDefault.default).oneOf([
-        20,
-        30
-    ]),
-    fitOnFrame: (0, _propTypesDefault.default).bool,
-    imageType: (0, _propTypesDefault.default).oneOf([
-        "thumbnail",
-        "circular"
-    ]),
-    imageHeight: (0, _propTypesDefault.default).number,
-    caption: (0, _propTypesDefault.default).bool,
-    card: (0, _propTypesDefault.default).bool
-};
-ShimmerSimpleGallery.defaultProps = {
-    row: 3,
-    col: 3,
-    gap: 20,
-    fitOnFrame: false,
-    imageType: "thumbnail",
-    caption: false,
-    card: false
-};
-var css$4 = ".shimmer-gallery-puzzle {\n  height: 540px; }\n\n.circular-image-caption .shimmer-title-line {\n  margin: auto; }\n";
-styleInject(css$4);
-var ShimmerFeaturedGallery = function ShimmerFeaturedGallery(_ref) {
-    var row = _ref.row, col = _ref.col, gap = _ref.gap, card = _ref.card, frameHeight = _ref.frameHeight;
-    var style = {};
-    if (frameHeight) style.height = frameHeight + "px";
-    var renderContent = function renderContent() {
-        return (0, _reactDefault.default).createElement("div", {
-            className: "shimmer-row shimmer-gallery-puzzle",
-            style: style
-        }, (0, _reactDefault.default).createElement("div", {
-            className: "shimmer-col flex-1"
-        }, (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-            className: "h-100",
-            fitOnFrame: true
-        })), (0, _reactDefault.default).createElement("div", {
-            className: "shimmer-col flex-1"
-        }, (0, _reactDefault.default).createElement(ShimmerSimpleGallery, {
-            row: row,
-            col: col,
-            gap: gap,
-            className: "h-100",
-            fitOnFrame: true
-        })));
-    };
-    if (!card) return renderContent();
-    return (0, _reactDefault.default).createElement(ShimmerCard, {
-        paddingSize: 20
-    }, renderContent());
-};
-ShimmerFeaturedGallery.propTypes = {
-    row: (0, _propTypesDefault.default).number,
-    col: (0, _propTypesDefault.default).oneOf([
-        2,
-        3,
-        4
-    ]),
-    gap: (0, _propTypesDefault.default).oneOf([
-        20,
-        30
-    ]),
-    card: (0, _propTypesDefault.default).bool,
-    frameHeight: (0, _propTypesDefault.default).number
-};
-ShimmerFeaturedGallery.defaultProps = {
-    card: false,
-    row: 2,
-    col: 2,
-    gap: 20,
-    frameHeight: 600
-};
-var ShimmerTableCol = function ShimmerTableCol() {
-    return (0, _reactDefault.default).createElement("div", {
-        className: "shimmer shimmer-table-col"
-    });
-};
-var ShimmerTableRow = function ShimmerTableRow(_ref) {
-    var col = _ref.col, header = _ref.header;
-    var renderColumns = function renderColumns() {
-        var columns = [];
-        for(var index = 0; index < col; index++)columns.push((0, _reactDefault.default).createElement(ShimmerTableCol, {
-            key: index
-        }));
-        return columns;
-    };
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames({
-            "shimmer-table-row": true,
-            "shimmer-table-row--header": header
-        })
-    }, renderColumns());
-};
-ShimmerTableRow.propTypes = {
-    col: (0, _propTypesDefault.default).number.isRequired,
-    header: (0, _propTypesDefault.default).bool
-};
-ShimmerTableRow.defaultProps = {
-    col: 5,
-    header: false
-};
-var css$5 = ".shimmer-table-row {\n  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);\n  display: flex;\n  padding: 25px 0;\n  background-color: #ffffff;\n  border-radius: 5px;\n  margin-bottom: 20px; }\n  .shimmer-table-row--header {\n    background-color: transparent;\n    box-shadow: none;\n    margin: 0; }\n  .shimmer-table-row > .shimmer {\n    margin: 0 30px; }\n\n.shimmer-table-col {\n  width: 100%;\n  height: 10px;\n  border-radius: 10px; }\n";
-styleInject(css$5);
-var ShimmerTable = function ShimmerTable(_ref) {
-    var row = _ref.row, col = _ref.col;
-    var renderRows = function renderRows() {
-        var rows = [];
-        for(var index = 0; index < row; index++)rows.push((0, _reactDefault.default).createElement(ShimmerTableRow, {
-            col: col,
-            key: index
-        }));
-        return rows;
-    };
-    return (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTableRow, {
-        col: col,
-        header: true
-    }), renderRows());
-};
-ShimmerTable.propTypes = {
-    row: (0, _propTypesDefault.default).number,
-    col: (0, _propTypesDefault.default).number
-};
-ShimmerTable.defaultProps = {
-    row: 5,
-    col: 5
-};
-var css$6 = ".shimmer-badge {\n  width: 80px;\n  height: 24px;\n  border-radius: 20px;\n  margin-bottom: 20px; }\n";
-styleInject(css$6);
-var ShimmerBadge = function ShimmerBadge(_ref) {
-    var width = _ref.width;
-    var style = {};
-    if (width) style.width = width + "px";
-    return (0, _reactDefault.default).createElement("div", {
-        className: "shimmer shimmer-badge",
-        style: style
-    });
-};
-ShimmerBadge.propTypes = {
-    width: (0, _propTypesDefault.default).number
-};
-var css$7 = ".shimmer-text {\n  margin-bottom: 30px; }\n  .shimmer-text-line {\n    width: 100%;\n    height: 8px;\n    border-radius: 10px; }\n    .shimmer-text-line:first-child {\n      width: 100% !important; }\n    .shimmer-text-line:last-child {\n      width: 40%; }\n";
-styleInject(css$7);
-var ShimmerText = function ShimmerText(_ref) {
-    var _classNames;
-    var line = _ref.line, gap = _ref.gap, className = _ref.className;
-    var renderLines = function renderLines() {
-        var text_lines = [];
-        for(var index = 0; index < line; index++)text_lines.push((0, _reactDefault.default).createElement("div", {
-            className: "shimmer shimmer-text-line",
-            key: index
-        }));
-        return text_lines;
-    };
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames((_classNames = {
-            "grid shimmer-text": true
-        }, defineProperty(_classNames, "grid-gap-" + gap, gap), defineProperty(_classNames, className, className), _classNames))
-    }, renderLines());
-};
-ShimmerText.propTypes = {
-    line: (0, _propTypesDefault.default).number,
-    gap: (0, _propTypesDefault.default).oneOf([
-        10,
-        15,
-        20,
-        30
-    ]),
-    className: (0, _propTypesDefault.default).string
-};
-ShimmerText.defaultProps = {
-    line: 5,
-    gap: 15
-};
-var css$8 = ".shimmer-separator {\n  height: 1px;\n  background-color: #dddddd;\n  margin: 40px 0; }\n";
-styleInject(css$8);
-var ShimmerSeparator = function ShimmerSeparator() {
-    return (0, _reactDefault.default).createElement("div", {
-        className: "shimmer-separator"
-    });
-};
-var ShimmerSocialPost = function ShimmerSocialPost(_ref) {
-    var type = _ref.type, title = _ref.title;
-    var renderContents = function renderContents() {
-        if (type === "image") return (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-            height: 300,
-            className: "m-02"
-        });
-        else if (type === "text") return (0, _reactDefault.default).createElement(ShimmerText, {
-            line: 13,
-            className: "p-15"
-        });
-        else return (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerText, {
-            line: 3,
-            className: "p-15"
-        }), (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-            height: 300,
-            className: "m-02"
-        }));
-    };
-    return (0, _reactDefault.default).createElement(ShimmerCard, null, (0, _reactDefault.default).createElement("div", {
-        className: "p-15"
-    }, (0, _reactDefault.default).createElement("div", {
-        className: "flex"
-    }, (0, _reactDefault.default).createElement(ShimmerCircularImage, null), (0, _reactDefault.default).createElement("div", {
-        className: "flex-1 p-15"
-    }, (0, _reactDefault.default).createElement(ShimmerTitle, {
-        variant: "secondary",
-        className: "w-40"
-    }))), title && (0, _reactDefault.default).createElement(ShimmerTitle, {
-        line: 1,
-        className: "w-40 m-0"
-    })), renderContents(), (0, _reactDefault.default).createElement("div", {
-        className: "p-15 flex flex-content-between"
-    }, (0, _reactDefault.default).createElement(ShimmerTitle, {
-        line: 1,
-        className: "w-10",
-        variant: "secondary"
-    }), (0, _reactDefault.default).createElement(ShimmerTitle, {
-        line: 1,
-        className: "w-10",
-        variant: "secondary"
-    })));
-};
-ShimmerSocialPost.propTypes = {
-    type: (0, _propTypesDefault.default).oneOf([
-        "text",
-        "image",
-        "both"
-    ]),
-    title: (0, _propTypesDefault.default).bool
-};
-ShimmerSocialPost.defaultProps = {
-    type: "image",
-    title: false
-};
-var ShimmerCategoryItem = function ShimmerCategoryItem(_ref) {
-    var hasImage = _ref.hasImage, imageType = _ref.imageType, imageWidth = _ref.imageWidth, imageHeight = _ref.imageHeight, title = _ref.title, text = _ref.text, cta = _ref.cta, contentCenter = _ref.contentCenter;
-    return (0, _reactDefault.default).createElement("div", null, !hasImage ? (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTitle, {
-        variant: "secondary",
-        line: 1,
-        className: "mb-15 w-80"
-    }), (0, _reactDefault.default).createElement("div", {
-        className: "w-40"
-    }, (0, _reactDefault.default).createElement(ShimmerText, {
-        line: 3,
-        gap: 10
-    }))) : (0, _reactDefault.default).createElement("div", {
-        className: classnames({
-            flex: true,
-            "flex-vertical-center": contentCenter
-        })
-    }, imageType === "thumbnail" && (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-        width: imageWidth,
-        height: imageHeight
-    }), imageType === "circular" && (0, _reactDefault.default).createElement(ShimmerCircularImage, {
-        size: imageWidth
-    }), (0, _reactDefault.default).createElement("div", {
-        className: "flex-1 p-15"
-    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
-        variant: "secondary"
-    }), text && (0, _reactDefault.default).createElement(ShimmerText, {
-        line: 3,
-        gap: 10,
-        className: "mb-20"
-    }), cta && (0, _reactDefault.default).createElement(ShimmerButton, {
-        size: "sm"
-    }))));
-};
-ShimmerCategoryItem.propTypes = {
-    hasImage: (0, _propTypesDefault.default).bool.isRequired,
-    imageType: (0, _propTypesDefault.default).oneOf([
-        "circular",
-        "thumbnail"
-    ]),
-    imageWidth: (0, _propTypesDefault.default).number,
-    imageHeight: (0, _propTypesDefault.default).number,
-    title: (0, _propTypesDefault.default).bool,
-    text: (0, _propTypesDefault.default).bool,
-    cta: (0, _propTypesDefault.default).bool,
-    contentCenter: (0, _propTypesDefault.default).bool
-};
-ShimmerCategoryItem.defaultProps = {
-    hasImage: false,
-    imageType: "thumbnail",
-    title: false,
-    text: false,
-    contentCenter: false
-};
-var ShimmerCategoryList = function ShimmerCategoryList(_ref) {
-    var items = _ref.items, categoryStyle = _ref.categoryStyle, title = _ref.title;
-    var categories = {
-        STYLE_ONE: (0, _reactDefault.default).createElement(ShimmerCategoryItem, null),
-        STYLE_TWO: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
-            hasImage: true,
-            imageType: "thumbnail",
-            imageWidth: 100,
-            imageHeight: 100,
-            title: true
-        }),
-        STYLE_THREE: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
-            hasImage: true,
-            imageType: "circular",
-            imageWidth: 100,
-            imageHeight: 100,
-            title: true
-        }),
-        STYLE_FOUR: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
-            hasImage: true,
-            imageType: "thumbnail",
-            imageWidth: 100,
-            imageHeight: 100,
-            text: true
-        }),
-        STYLE_FIVE: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
-            hasImage: true,
-            imageType: "circular",
-            imageWidth: 100,
-            imageHeight: 100,
-            text: true
-        }),
-        STYLE_SIX: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
-            hasImage: true,
-            imageType: "thumbnail",
-            imageWidth: 100,
-            imageHeight: 100,
-            text: true,
-            cta: true
-        }),
-        STYLE_SEVEN: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
-            hasImage: true,
-            imageType: "circular",
-            imageWidth: 100,
-            imageHeight: 100,
-            text: true,
-            cta: true
-        })
-    };
-    var renderItems = function renderItems() {
-        var list = [];
-        for(var index = 0; index < items; index++)list.push((0, _reactDefault.default).createElement("div", {
-            key: index
-        }, categories[categoryStyle]));
-        return list;
-    };
-    return (0, _reactDefault.default).createElement(ShimmerCard, {
-        paddingSize: 20
-    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
-        line: 1,
-        className: "w-60"
-    }), renderItems());
-};
-ShimmerCategoryList.propTypes = {
-    title: (0, _propTypesDefault.default).bool,
-    items: (0, _propTypesDefault.default).number,
-    categoryStyle: (0, _propTypesDefault.default).oneOf([
-        "STYLE_ONE",
-        "STYLE_TWO",
-        "STYLE_THREE",
-        "STYLE_FOUR",
-        "STYLE_FIVE",
-        "STYLE_SIX",
-        "STYLE_SEVEN"
-    ])
-};
-ShimmerCategoryList.defaultProps = {
-    title: false,
-    items: 5,
-    categoryStyle: "STYLE_ONE"
-};
-var ShimmerPostDetails = function ShimmerPostDetails(_ref) {
-    var variant = _ref.variant, cta = _ref.cta, card = _ref.card;
-    var variants = {
-        SIMPLE: (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTitle, {
-            line: 1,
-            className: "w-40"
-        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
-            line: 1,
-            variant: "secondary",
-            className: "w-20 mb-40"
-        }), (0, _reactDefault.default).createElement("div", {
-            className: "w-40 mb-40"
-        }, (0, _reactDefault.default).createElement(ShimmerText, {
-            line: 1,
-            className: "mb-15 w-20"
-        }), (0, _reactDefault.default).createElement(ShimmerText, {
-            line: 1,
-            className: "mb-15 w-40"
-        }), (0, _reactDefault.default).createElement(ShimmerText, {
-            line: 1,
-            className: "mb-30 w-60"
-        })), (0, _reactDefault.default).createElement(ShimmerTitle, {
-            line: 1,
-            variant: "secondary",
-            className: "w-30"
-        }), (0, _reactDefault.default).createElement(ShimmerText, {
-            className: "mb-40"
-        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
-            line: 1,
-            variant: "secondary",
-            className: "w-30"
-        }), (0, _reactDefault.default).createElement(ShimmerText, {
-            className: "mb-40"
-        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
-            line: 1,
-            variant: "secondary",
-            className: "w-30"
-        }), (0, _reactDefault.default).createElement(ShimmerText, {
-            className: "mb-40"
-        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
-            line: 1,
-            variant: "secondary",
-            className: "w-30"
-        }), (0, _reactDefault.default).createElement(ShimmerText, {
-            className: "mb-40"
-        }), cta && (0, _reactDefault.default).createElement(ShimmerButton, null)),
-        EDITOR: (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTitle, {
-            line: 1,
-            className: "w-40"
-        }), (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-            height: 400
-        }), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement("div", {
-            className: "shimmer-row"
-        }, (0, _reactDefault.default).createElement("div", {
-            className: "shimmer-col"
-        }, (0, _reactDefault.default).createElement(ShimmerText, {
-            line: 13
-        })), (0, _reactDefault.default).createElement("div", {
-            className: "shimmer-col"
-        }, (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-            height: 300
-        }))), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement(ShimmerText, null))
-    };
-    if (!card) return variants[variant];
-    return (0, _reactDefault.default).createElement(ShimmerCard, {
-        paddingSize: 30
-    }, variants[variant]);
-};
-ShimmerPostDetails.propTypes = {
-    variant: (0, _propTypesDefault.default).oneOf([
-        "SIMPLE",
-        "EDITOR"
-    ]),
-    cta: (0, _propTypesDefault.default).bool,
-    card: (0, _propTypesDefault.default).bool
-};
-ShimmerPostDetails.defaultProps = {
-    variant: "SIMPLE",
-    cta: false,
-    card: false
-};
-var ShimmerPostItem = function ShimmerPostItem(_ref) {
-    var cta = _ref.cta, title = _ref.title, text = _ref.text, imageType = _ref.imageType, imageWidth = _ref.imageWidth, imageHeight = _ref.imageHeight;
-    return (0, _reactDefault.default).createElement(ShimmerCard, null, imageType === "thumbnail" && (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-        height: imageHeight,
-        width: imageWidth,
-        className: imageWidth && imageWidth !== "w-100" ? "m-30 mb-0" : "mb-0"
-    }), imageType === "circular" && (0, _reactDefault.default).createElement(ShimmerCircularImage, {
-        size: imageWidth,
-        className: "m-30 mb-0"
-    }), (0, _reactDefault.default).createElement("div", {
-        className: "p-30"
-    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
-        variant: "secondary"
-    }), text && (0, _reactDefault.default).createElement(ShimmerText, {
-        line: 3,
-        gap: 10
-    }), cta && (0, _reactDefault.default).createElement(ShimmerButton, {
-        size: "sm"
-    })));
-};
-ShimmerPostItem.propTypes = {
-    title: (0, _propTypesDefault.default).bool,
-    text: (0, _propTypesDefault.default).bool,
-    cta: (0, _propTypesDefault.default).bool,
-    imageType: (0, _propTypesDefault.default).oneOf([
-        "circular",
-        "thumbnail"
-    ]),
-    imageHeight: (0, _propTypesDefault.default).number,
-    imageWidth: (0, _propTypesDefault.default).number
-};
-ShimmerPostItem.defaultProps = {
-    title: false,
-    text: false,
-    cta: false,
-    imageType: "thumbnail"
-};
-var ShimmerPostList = function ShimmerPostList(_ref) {
-    var _classNames;
-    var row = _ref.row, col = _ref.col, gap = _ref.gap, className = _ref.className, postStyle = _ref.postStyle;
-    var posts = {
-        STYLE_ONE: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            title: true,
-            text: true,
-            cta: true
-        }),
-        STYLE_TWO: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            title: true,
-            cta: true
-        }),
-        STYLE_THREE: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            title: true
-        }),
-        STYLE_FOUR: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            text: true,
-            cta: true
-        }),
-        STYLE_FIVE: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            text: true
-        }),
-        STYLE_SIX: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            title: true,
-            text: true,
-            cta: true,
-            imageType: "thumbnail",
-            imageWidth: 80,
-            imageHeight: 80,
-            contentCenter: true
-        }),
-        STYLE_SEVEN: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            text: true,
-            cta: true,
-            imageType: "thumbnail",
-            imageWidth: 80,
-            imageHeight: 80,
-            contentCenter: true
-        }),
-        STYLE_EIGHT: (0, _reactDefault.default).createElement(ShimmerPostItem, {
-            title: true,
-            cta: true,
-            imageType: "thumbnail",
-            imageWidth: 80,
-            imageHeight: 80,
-            contentCenter: true
-        })
-    };
-    var renderPosts = function renderPosts() {
-        var list = [];
-        var items = row * col;
-        for(var index = 0; index < items; index++)list.push((0, _reactDefault.default).createElement("div", {
-            key: index
-        }, posts[postStyle]));
-        return list;
-    };
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames((_classNames = {
-            grid: true
-        }, defineProperty(_classNames, "grid-gap-" + gap, true), defineProperty(_classNames, "grid-column-" + col, true), defineProperty(_classNames, className, className), _classNames))
-    }, renderPosts());
-};
-ShimmerPostList.propTypes = {
-    row: (0, _propTypesDefault.default).number,
-    col: (0, _propTypesDefault.default).oneOf([
-        2,
-        3,
-        4
-    ]),
-    gap: (0, _propTypesDefault.default).oneOf([
-        20,
-        30
-    ]),
-    postStyle: (0, _propTypesDefault.default).oneOf([
-        "STYLE_ONE",
-        "STYLE_TWO",
-        "STYLE_THREE",
-        "STYLE_FOUR",
-        "STYLE_FIVE",
-        "STYLE_SIX",
-        "STYLE_SEVEN",
-        "STYLE_EIGHT"
-    ])
-};
-ShimmerPostList.defaultProps = {
-    row: 3,
-    col: 3,
-    gap: 20,
-    postStyle: "STYLE_ONE"
-};
-var ShimmerContentBlock = function ShimmerContentBlock(_ref) {
-    var card = _ref.card, title = _ref.title, text = _ref.text, cta = _ref.cta, thumbnailWidth = _ref.thumbnailWidth, thumbnailHeight = _ref.thumbnailHeight, reverse = _ref.reverse;
-    var renderContent = function renderContent() {
-        return (0, _reactDefault.default).createElement("div", {
-            className: classnames({
-                flex: true,
-                "flex-reverse": reverse
-            })
-        }, (0, _reactDefault.default).createElement("div", {
-            className: classnames({
-                flex: true,
-                "w-50": !thumbnailWidth
-            })
-        }, (0, _reactDefault.default).createElement(ShimmerThumbnail, {
-            width: thumbnailWidth,
-            height: thumbnailHeight,
-            className: "h-100 m-0"
-        })), (0, _reactDefault.default).createElement("div", {
-            className: " flex-1 p-30"
-        }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
-            className: "w-40",
-            line: 1
-        }), text && (0, _reactDefault.default).createElement(ShimmerText, null), cta && (0, _reactDefault.default).createElement(ShimmerButton, null)));
-    };
-    if (!card) return renderContent();
-    return (0, _reactDefault.default).createElement(ShimmerCard, null, renderContent());
-};
-ShimmerContentBlock.propTypes = {
-    card: (0, _propTypesDefault.default).bool,
-    title: (0, _propTypesDefault.default).bool,
-    text: (0, _propTypesDefault.default).bool,
-    cta: (0, _propTypesDefault.default).bool,
-    thumbnailWidth: (0, _propTypesDefault.default).number,
-    thumbnailHeight: (0, _propTypesDefault.default).number,
-    reverse: (0, _propTypesDefault.default).bool
-};
-ShimmerContentBlock.defaultProps = {
-    card: true,
-    title: false,
-    text: false,
-    cta: false,
-    reverse: false
-};
-var ShimmerSectionHeader = function ShimmerSectionHeader(_ref) {
-    var title = _ref.title, subTitle = _ref.subTitle, center = _ref.center;
-    if (!title && !subTitle) return null;
-    return (0, _reactDefault.default).createElement("div", {
-        className: classnames({
-            "w-60 mb-40": true,
-            "ml-auto mr-auto": center
-        })
-    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
-        className: classnames({
-            "w-40": true,
-            "ml-auto mr-auto": center
-        }),
-        line: 1
-    }), subTitle && (0, _reactDefault.default).createElement("div", {
-        className: classnames({
-            "flex-horizontal-center": center
-        })
-    }, (0, _reactDefault.default).createElement(ShimmerText, {
-        line: 1,
-        className: "mb-15 w-80"
-    }), (0, _reactDefault.default).createElement(ShimmerText, {
-        line: 1,
-        className: "mb-15 w-70"
-    }), (0, _reactDefault.default).createElement(ShimmerText, {
-        line: 1,
-        className: "mb-15 w-60"
-    })));
-};
-ShimmerSectionHeader.propTypes = {
-    title: (0, _propTypesDefault.default).bool,
-    subTitle: (0, _propTypesDefault.default).bool,
-    center: (0, _propTypesDefault.default).bool
-};
-ShimmerSectionHeader.defaultProps = {
-    title: true,
-    subTitle: true,
-    center: false
-};
-var css$9 = '.shimmer {\n  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);\n  background-size: 1000px 100%;\n  animation: shimmer 2.2s linear infinite forwards; }\n\n@-webkit-keyframes shimmer {\n  0% {\n    background-position: -100% 0; }\n  100% {\n    background-position: 100% 0; } }\n\n@keyframes shimmer {\n  0% {\n    background-position: -1000px 0; }\n  100% {\n    background-position: 1000px 0; } }\n\n/*\n=====\nPadding Styles\n=====\n*/\n.p-30 {\n  padding: 30px; }\n\n.p-20 {\n  padding: 20px; }\n\n.p-15 {\n  padding: 15px; }\n\n/*\n=====\nMargin Styles\n=====\n*/\n.m-0 {\n  margin: 0; }\n\n.m-auto {\n  margin: auto; }\n\n.ml-auto {\n  margin-left: auto; }\n\n.mr-auto {\n  margin-right: auto; }\n\n.m-15 {\n  margin: 15px; }\n\n.m-30 {\n  margin: 30px; }\n\n.mb-0 {\n  margin-bottom: 0px; }\n\n.mb-10 {\n  margin-bottom: 10px; }\n\n.mb-15 {\n  margin-bottom: 15px; }\n\n.mb-20 {\n  margin-bottom: 20px; }\n\n.mt-15 {\n  margin-top: 15px; }\n\n.mb-30 {\n  margin-bottom: 30px; }\n\n.mb-40 {\n  margin-bottom: 40px; }\n\n/*\n=======\nContent Size Styles\n=======\n*/\n.w-10 {\n  width: 10%; }\n\n.w-20 {\n  width: 20%; }\n\n.w-30 {\n  width: 30%; }\n\n.w-40 {\n  width: 40%; }\n\n.w-50 {\n  width: 50%; }\n\n.w-60 {\n  width: 60%; }\n\n.w-70 {\n  width: 70%; }\n\n.w-80 {\n  width: 80%; }\n\n/*\n========\nFlex Styles\n========\n*/\n.flex {\n  display: flex; }\n\n.flex-direction-column {\n  flex-direction: column; }\n\n.flex-horizontal-center {\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.flex-vertical-center {\n  align-items: center; }\n\n.flex-content-between {\n  justify-content: space-between; }\n\n.flex-reverse {\n  flex-direction: row-reverse; }\n\n.flex-1 {\n  flex-grow: 1; }\n\n/*\n=======\nGrid Styles\n=======\n*/\n.grid {\n  display: grid; }\n\n.grid-gap-10 {\n  gap: 10px; }\n\n.grid-gap-15 {\n  gap: 15px; }\n\n.grid-gap-20 {\n  gap: 20px; }\n\n.grid-gap-30 {\n  gap: 30px; }\n\n.grid-column-2 {\n  grid-template-columns: auto auto; }\n\n.grid-column-3 {\n  grid-template-columns: auto auto auto; }\n\n.grid-column-4 {\n  grid-template-columns: auto auto auto auto; }\n\n.text-center {\n  text-align: center; }\n\n.border-rounded {\n  border-radius: 4px; }\n\n.h-100 {\n  height: 100% !important; }\n\n.shimmer-hr {\n  border-color: #f6f6f6; }\n\n.shimmer-row {\n  display: flex;\n  margin: 0 -15px; }\n  .shimmer-row .shimmer-col,\n  .shimmer-row [class*="shimmer-col-"] {\n    padding-left: 15px;\n    padding-right: 15px;\n    flex-basis: 0;\n    flex-grow: 1;\n    max-width: 100%; }\n';
-styleInject(css$9);
-
-},{"react":"21dqq","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7wKI2":[function(require,module,exports) {
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ var ReactIs = require("96e34ae03f5a2631");
-// By explicitly using `prop-types` you are opting into new development behavior.
-// http://fb.me/prop-types-in-prod
-var throwOnDirectAccess = true;
-module.exports = require("cb216452e2171041")(ReactIs.isElement, throwOnDirectAccess);
-
-},{"96e34ae03f5a2631":"7EuwB","cb216452e2171041":"bBUgD"}],"7EuwB":[function(require,module,exports) {
-"use strict";
-module.exports = require("2255125a8e8b1051");
-
-},{"2255125a8e8b1051":"5DsXl"}],"5DsXl":[function(require,module,exports) {
-/** @license React v16.13.1
- * react-is.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-(function() {
-    "use strict";
-    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-    // nor polyfill, then a plain number is used for performance.
-    var hasSymbol = typeof Symbol === "function" && Symbol.for;
-    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for("react.element") : 0xeac7;
-    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for("react.portal") : 0xeaca;
-    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for("react.fragment") : 0xeacb;
-    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for("react.strict_mode") : 0xeacc;
-    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for("react.profiler") : 0xead2;
-    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for("react.provider") : 0xeacd;
-    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for("react.context") : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
-    // (unstable) APIs that have been removed. Can we remove the symbols?
-    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for("react.async_mode") : 0xeacf;
-    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for("react.concurrent_mode") : 0xeacf;
-    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for("react.forward_ref") : 0xead0;
-    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for("react.suspense") : 0xead1;
-    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for("react.suspense_list") : 0xead8;
-    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for("react.memo") : 0xead3;
-    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for("react.lazy") : 0xead4;
-    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for("react.block") : 0xead9;
-    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for("react.fundamental") : 0xead5;
-    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for("react.responder") : 0xead6;
-    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for("react.scope") : 0xead7;
-    function isValidElementType(type) {
-        return typeof type === "string" || typeof type === "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-        type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === "object" && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
-    }
-    function typeOf(object) {
-        if (typeof object === "object" && object !== null) {
-            var $$typeof = object.$$typeof;
-            switch($$typeof){
-                case REACT_ELEMENT_TYPE:
-                    var type = object.type;
-                    switch(type){
-                        case REACT_ASYNC_MODE_TYPE:
-                        case REACT_CONCURRENT_MODE_TYPE:
-                        case REACT_FRAGMENT_TYPE:
-                        case REACT_PROFILER_TYPE:
-                        case REACT_STRICT_MODE_TYPE:
-                        case REACT_SUSPENSE_TYPE:
-                            return type;
-                        default:
-                            var $$typeofType = type && type.$$typeof;
-                            switch($$typeofType){
-                                case REACT_CONTEXT_TYPE:
-                                case REACT_FORWARD_REF_TYPE:
-                                case REACT_LAZY_TYPE:
-                                case REACT_MEMO_TYPE:
-                                case REACT_PROVIDER_TYPE:
-                                    return $$typeofType;
-                                default:
-                                    return $$typeof;
-                            }
-                    }
-                case REACT_PORTAL_TYPE:
-                    return $$typeof;
-            }
-        }
-        return undefined;
-    } // AsyncMode is deprecated along with isAsyncMode
-    var AsyncMode = REACT_ASYNC_MODE_TYPE;
-    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-    var ContextConsumer = REACT_CONTEXT_TYPE;
-    var ContextProvider = REACT_PROVIDER_TYPE;
-    var Element = REACT_ELEMENT_TYPE;
-    var ForwardRef = REACT_FORWARD_REF_TYPE;
-    var Fragment = REACT_FRAGMENT_TYPE;
-    var Lazy = REACT_LAZY_TYPE;
-    var Memo = REACT_MEMO_TYPE;
-    var Portal = REACT_PORTAL_TYPE;
-    var Profiler = REACT_PROFILER_TYPE;
-    var StrictMode = REACT_STRICT_MODE_TYPE;
-    var Suspense = REACT_SUSPENSE_TYPE;
-    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
-    function isAsyncMode(object) {
-        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-            hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
-            console["warn"]("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.");
-        }
-        return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
-    }
-    function isConcurrentMode(object) {
-        return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
-    }
-    function isContextConsumer(object) {
-        return typeOf(object) === REACT_CONTEXT_TYPE;
-    }
-    function isContextProvider(object) {
-        return typeOf(object) === REACT_PROVIDER_TYPE;
-    }
-    function isElement(object) {
-        return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-    }
-    function isForwardRef(object) {
-        return typeOf(object) === REACT_FORWARD_REF_TYPE;
-    }
-    function isFragment(object) {
-        return typeOf(object) === REACT_FRAGMENT_TYPE;
-    }
-    function isLazy(object) {
-        return typeOf(object) === REACT_LAZY_TYPE;
-    }
-    function isMemo(object) {
-        return typeOf(object) === REACT_MEMO_TYPE;
-    }
-    function isPortal(object) {
-        return typeOf(object) === REACT_PORTAL_TYPE;
-    }
-    function isProfiler(object) {
-        return typeOf(object) === REACT_PROFILER_TYPE;
-    }
-    function isStrictMode(object) {
-        return typeOf(object) === REACT_STRICT_MODE_TYPE;
-    }
-    function isSuspense(object) {
-        return typeOf(object) === REACT_SUSPENSE_TYPE;
-    }
-    exports.AsyncMode = AsyncMode;
-    exports.ConcurrentMode = ConcurrentMode;
-    exports.ContextConsumer = ContextConsumer;
-    exports.ContextProvider = ContextProvider;
-    exports.Element = Element;
-    exports.ForwardRef = ForwardRef;
-    exports.Fragment = Fragment;
-    exports.Lazy = Lazy;
-    exports.Memo = Memo;
-    exports.Portal = Portal;
-    exports.Profiler = Profiler;
-    exports.StrictMode = StrictMode;
-    exports.Suspense = Suspense;
-    exports.isAsyncMode = isAsyncMode;
-    exports.isConcurrentMode = isConcurrentMode;
-    exports.isContextConsumer = isContextConsumer;
-    exports.isContextProvider = isContextProvider;
-    exports.isElement = isElement;
-    exports.isForwardRef = isForwardRef;
-    exports.isFragment = isFragment;
-    exports.isLazy = isLazy;
-    exports.isMemo = isMemo;
-    exports.isPortal = isPortal;
-    exports.isProfiler = isProfiler;
-    exports.isStrictMode = isStrictMode;
-    exports.isSuspense = isSuspense;
-    exports.isValidElementType = isValidElementType;
-    exports.typeOf = typeOf;
-})();
-
-},{}],"bBUgD":[function(require,module,exports) {
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-var ReactIs = require("c437388b089702c3");
-var assign = require("c067a60101d8520c");
-var ReactPropTypesSecret = require("74a0f89a70b9f3c2");
-var has = require("18441b11647bc78");
-var checkPropTypes = require("bec3f6ff89f0b072");
-var printWarning = function() {};
-printWarning = function(text) {
-    var message = "Warning: " + text;
-    if (typeof console !== "undefined") console.error(message);
-    try {
-        // --- Welcome to debugging React ---
-        // This error was thrown as a convenience so that you can use this stack
-        // to find the callsite that caused this warning to fire.
-        throw new Error(message);
-    } catch (x) {}
-};
-function emptyFunctionThatReturnsNull() {
-    return null;
-}
-module.exports = function(isValidElement, throwOnDirectAccess) {
-    /* global Symbol */ var ITERATOR_SYMBOL = typeof Symbol === "function" && Symbol.iterator;
-    var FAUX_ITERATOR_SYMBOL = "@@iterator"; // Before Symbol spec.
-    /**
-   * Returns the iterator method function contained on the iterable object.
-   *
-   * Be sure to invoke the function with the iterable as context:
-   *
-   *     var iteratorFn = getIteratorFn(myIterable);
-   *     if (iteratorFn) {
-   *       var iterator = iteratorFn.call(myIterable);
-   *       ...
-   *     }
-   *
-   * @param {?object} maybeIterable
-   * @return {?function}
-   */ function getIteratorFn(maybeIterable) {
-        var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
-        if (typeof iteratorFn === "function") return iteratorFn;
-    }
-    /**
-   * Collection of methods that allow declaration and validation of props that are
-   * supplied to React components. Example usage:
-   *
-   *   var Props = require('ReactPropTypes');
-   *   var MyArticle = React.createClass({
-   *     propTypes: {
-   *       // An optional string prop named "description".
-   *       description: Props.string,
-   *
-   *       // A required enum prop named "category".
-   *       category: Props.oneOf(['News','Photos']).isRequired,
-   *
-   *       // A prop named "dialog" that requires an instance of Dialog.
-   *       dialog: Props.instanceOf(Dialog).isRequired
-   *     },
-   *     render: function() { ... }
-   *   });
-   *
-   * A more formal specification of how these methods are used:
-   *
-   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-   *   decl := ReactPropTypes.{type}(.isRequired)?
-   *
-   * Each and every declaration produces a function with the same signature. This
-   * allows the creation of custom validation functions. For example:
-   *
-   *  var MyLink = React.createClass({
-   *    propTypes: {
-   *      // An optional string or URI prop named "href".
-   *      href: function(props, propName, componentName) {
-   *        var propValue = props[propName];
-   *        if (propValue != null && typeof propValue !== 'string' &&
-   *            !(propValue instanceof URI)) {
-   *          return new Error(
-   *            'Expected a string or an URI for ' + propName + ' in ' +
-   *            componentName
-   *          );
-   *        }
-   *      }
-   *    },
-   *    render: function() {...}
-   *  });
-   *
-   * @internal
-   */ var ANONYMOUS = "<<anonymous>>";
-    // Important!
-    // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
-    var ReactPropTypes = {
-        array: createPrimitiveTypeChecker("array"),
-        bigint: createPrimitiveTypeChecker("bigint"),
-        bool: createPrimitiveTypeChecker("boolean"),
-        func: createPrimitiveTypeChecker("function"),
-        number: createPrimitiveTypeChecker("number"),
-        object: createPrimitiveTypeChecker("object"),
-        string: createPrimitiveTypeChecker("string"),
-        symbol: createPrimitiveTypeChecker("symbol"),
-        any: createAnyTypeChecker(),
-        arrayOf: createArrayOfTypeChecker,
-        element: createElementTypeChecker(),
-        elementType: createElementTypeTypeChecker(),
-        instanceOf: createInstanceTypeChecker,
-        node: createNodeChecker(),
-        objectOf: createObjectOfTypeChecker,
-        oneOf: createEnumTypeChecker,
-        oneOfType: createUnionTypeChecker,
-        shape: createShapeTypeChecker,
-        exact: createStrictShapeTypeChecker
-    };
-    /**
-   * inlined Object.is polyfill to avoid requiring consumers ship their own
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-   */ /*eslint-disable no-self-compare*/ function is(x, y) {
-        // SameValue algorithm
-        if (x === y) // Steps 1-5, 7-10
-        // Steps 6.b-6.e: +0 != -0
-        return x !== 0 || 1 / x === 1 / y;
-        else // Step 6.a: NaN == NaN
-        return x !== x && y !== y;
-    }
-    /*eslint-enable no-self-compare*/ /**
-   * We use an Error-like object for backward compatibility as people may call
-   * PropTypes directly and inspect their output. However, we don't use real
-   * Errors anymore. We don't inspect their stack anyway, and creating them
-   * is prohibitively expensive if they are created too often, such as what
-   * happens in oneOfType() for any type before the one that matched.
-   */ function PropTypeError(message, data) {
-        this.message = message;
-        this.data = data && typeof data === "object" ? data : {};
-        this.stack = "";
-    }
-    // Make `instanceof Error` still work for returned errors.
-    PropTypeError.prototype = Error.prototype;
-    function createChainableTypeChecker(validate) {
-        var manualPropTypeCallCache = {};
-        var manualPropTypeWarningCount = 0;
-        function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
-            componentName = componentName || ANONYMOUS;
-            propFullName = propFullName || propName;
-            if (secret !== ReactPropTypesSecret) {
-                if (throwOnDirectAccess) {
-                    // New behavior only for users of `prop-types` package
-                    var err = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");
-                    err.name = "Invariant Violation";
-                    throw err;
-                } else if (typeof console !== "undefined") {
-                    // Old behavior for people using React.PropTypes
-                    var cacheKey = componentName + ":" + propName;
-                    if (!manualPropTypeCallCache[cacheKey] && // Avoid spamming the console because they are often not actionable except for lib authors
-                    manualPropTypeWarningCount < 3) {
-                        printWarning("You are manually calling a React.PropTypes validation function for the `" + propFullName + "` prop on `" + componentName + "`. This is deprecated " + "and will throw in the standalone `prop-types` package. " + "You may be seeing this warning due to a third-party PropTypes " + "library. See https://fb.me/react-warning-dont-call-proptypes " + "for details.");
-                        manualPropTypeCallCache[cacheKey] = true;
-                        manualPropTypeWarningCount++;
-                    }
-                }
-            }
-            if (props[propName] == null) {
-                if (isRequired) {
-                    if (props[propName] === null) return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required " + ("in `" + componentName + "`, but its value is `null`."));
-                    return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required in " + ("`" + componentName + "`, but its value is `undefined`."));
-                }
-                return null;
-            } else return validate(props, propName, componentName, location, propFullName);
-        }
-        var chainedCheckType = checkType.bind(null, false);
-        chainedCheckType.isRequired = checkType.bind(null, true);
-        return chainedCheckType;
-    }
-    function createPrimitiveTypeChecker(expectedType) {
-        function validate(props, propName, componentName, location, propFullName, secret) {
-            var propValue = props[propName];
-            var propType = getPropType(propValue);
-            if (propType !== expectedType) {
-                // `propValue` being instance of, say, date/regexp, pass the 'object'
-                // check, but we can offer a more precise error message here rather than
-                // 'of type `object`'.
-                var preciseType = getPreciseType(propValue);
-                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + preciseType + "` supplied to `" + componentName + "`, expected ") + ("`" + expectedType + "`."), {
-                    expectedType: expectedType
-                });
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createAnyTypeChecker() {
-        return createChainableTypeChecker(emptyFunctionThatReturnsNull);
-    }
-    function createArrayOfTypeChecker(typeChecker) {
-        function validate(props, propName, componentName, location, propFullName) {
-            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside arrayOf.");
-            var propValue = props[propName];
-            if (!Array.isArray(propValue)) {
-                var propType = getPropType(propValue);
-                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an array."));
-            }
-            for(var i = 0; i < propValue.length; i++){
-                var error = typeChecker(propValue, i, componentName, location, propFullName + "[" + i + "]", ReactPropTypesSecret);
-                if (error instanceof Error) return error;
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createElementTypeChecker() {
-        function validate(props, propName, componentName, location, propFullName) {
-            var propValue = props[propName];
-            if (!isValidElement(propValue)) {
-                var propType = getPropType(propValue);
-                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement."));
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createElementTypeTypeChecker() {
-        function validate(props, propName, componentName, location, propFullName) {
-            var propValue = props[propName];
-            if (!ReactIs.isValidElementType(propValue)) {
-                var propType = getPropType(propValue);
-                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement type."));
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createInstanceTypeChecker(expectedClass) {
-        function validate(props, propName, componentName, location, propFullName) {
-            if (!(props[propName] instanceof expectedClass)) {
-                var expectedClassName = expectedClass.name || ANONYMOUS;
-                var actualClassName = getClassName(props[propName]);
-                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + actualClassName + "` supplied to `" + componentName + "`, expected ") + ("instance of `" + expectedClassName + "`."));
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createEnumTypeChecker(expectedValues) {
-        if (!Array.isArray(expectedValues)) {
-            {
-                if (arguments.length > 1) printWarning("Invalid arguments supplied to oneOf, expected an array, got " + arguments.length + " arguments. " + "A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).");
-                else printWarning("Invalid argument supplied to oneOf, expected an array.");
-            }
-            return emptyFunctionThatReturnsNull;
-        }
-        function validate(props, propName, componentName, location, propFullName) {
-            var propValue = props[propName];
-            for(var i = 0; i < expectedValues.length; i++){
-                if (is(propValue, expectedValues[i])) return null;
-            }
-            var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
-                var type = getPreciseType(value);
-                if (type === "symbol") return String(value);
-                return value;
-            });
-            return new PropTypeError("Invalid " + location + " `" + propFullName + "` of value `" + String(propValue) + "` " + ("supplied to `" + componentName + "`, expected one of " + valuesString + "."));
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createObjectOfTypeChecker(typeChecker) {
-        function validate(props, propName, componentName, location, propFullName) {
-            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside objectOf.");
-            var propValue = props[propName];
-            var propType = getPropType(propValue);
-            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an object."));
-            for(var key in propValue)if (has(propValue, key)) {
-                var error = typeChecker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
-                if (error instanceof Error) return error;
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createUnionTypeChecker(arrayOfTypeCheckers) {
-        if (!Array.isArray(arrayOfTypeCheckers)) {
-            printWarning("Invalid argument supplied to oneOfType, expected an instance of array.");
-            return emptyFunctionThatReturnsNull;
-        }
-        for(var i = 0; i < arrayOfTypeCheckers.length; i++){
-            var checker = arrayOfTypeCheckers[i];
-            if (typeof checker !== "function") {
-                printWarning("Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + getPostfixForTypeWarning(checker) + " at index " + i + ".");
-                return emptyFunctionThatReturnsNull;
-            }
-        }
-        function validate(props, propName, componentName, location, propFullName) {
-            var expectedTypes = [];
-            for(var i = 0; i < arrayOfTypeCheckers.length; i++){
-                var checker = arrayOfTypeCheckers[i];
-                var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
-                if (checkerResult == null) return null;
-                if (checkerResult.data && has(checkerResult.data, "expectedType")) expectedTypes.push(checkerResult.data.expectedType);
-            }
-            var expectedTypesMessage = expectedTypes.length > 0 ? ", expected one of type [" + expectedTypes.join(", ") + "]" : "";
-            return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`" + expectedTypesMessage + "."));
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createNodeChecker() {
-        function validate(props, propName, componentName, location, propFullName) {
-            if (!isNode(props[propName])) return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`, expected a ReactNode."));
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function invalidValidatorError(componentName, location, propFullName, key, type) {
-        return new PropTypeError((componentName || "React class") + ": " + location + " type `" + propFullName + "." + key + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + type + "`.");
-    }
-    function createShapeTypeChecker(shapeTypes) {
-        function validate(props, propName, componentName, location, propFullName) {
-            var propValue = props[propName];
-            var propType = getPropType(propValue);
-            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
-            for(var key in shapeTypes){
-                var checker = shapeTypes[key];
-                if (typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
-                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
-                if (error) return error;
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function createStrictShapeTypeChecker(shapeTypes) {
-        function validate(props, propName, componentName, location, propFullName) {
-            var propValue = props[propName];
-            var propType = getPropType(propValue);
-            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
-            // We need to check all keys in case some are required but missing from props.
-            var allKeys = assign({}, props[propName], shapeTypes);
-            for(var key in allKeys){
-                var checker = shapeTypes[key];
-                if (has(shapeTypes, key) && typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
-                if (!checker) return new PropTypeError("Invalid " + location + " `" + propFullName + "` key `" + key + "` supplied to `" + componentName + "`." + "\nBad object: " + JSON.stringify(props[propName], null, "  ") + "\nValid keys: " + JSON.stringify(Object.keys(shapeTypes), null, "  "));
-                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
-                if (error) return error;
-            }
-            return null;
-        }
-        return createChainableTypeChecker(validate);
-    }
-    function isNode(propValue) {
-        switch(typeof propValue){
-            case "number":
-            case "string":
-            case "undefined":
-                return true;
-            case "boolean":
-                return !propValue;
-            case "object":
-                if (Array.isArray(propValue)) return propValue.every(isNode);
-                if (propValue === null || isValidElement(propValue)) return true;
-                var iteratorFn = getIteratorFn(propValue);
-                if (iteratorFn) {
-                    var iterator = iteratorFn.call(propValue);
-                    var step;
-                    if (iteratorFn !== propValue.entries) while(!(step = iterator.next()).done){
-                        if (!isNode(step.value)) return false;
-                    }
-                    else // Iterator will provide entry [k,v] tuples rather than values.
-                    while(!(step = iterator.next()).done){
-                        var entry = step.value;
-                        if (entry) {
-                            if (!isNode(entry[1])) return false;
-                        }
-                    }
-                } else return false;
-                return true;
-            default:
-                return false;
-        }
-    }
-    function isSymbol(propType, propValue) {
-        // Native Symbol.
-        if (propType === "symbol") return true;
-        // falsy value can't be a Symbol
-        if (!propValue) return false;
-        // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
-        if (propValue["@@toStringTag"] === "Symbol") return true;
-        // Fallback for non-spec compliant Symbols which are polyfilled.
-        if (typeof Symbol === "function" && propValue instanceof Symbol) return true;
-        return false;
-    }
-    // Equivalent of `typeof` but with special handling for array and regexp.
-    function getPropType(propValue) {
-        var propType = typeof propValue;
-        if (Array.isArray(propValue)) return "array";
-        if (propValue instanceof RegExp) // Old webkits (at least until Android 4.0) return 'function' rather than
-        // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-        // passes PropTypes.object.
-        return "object";
-        if (isSymbol(propType, propValue)) return "symbol";
-        return propType;
-    }
-    // This handles more types than `getPropType`. Only used for error messages.
-    // See `createPrimitiveTypeChecker`.
-    function getPreciseType(propValue) {
-        if (typeof propValue === "undefined" || propValue === null) return "" + propValue;
-        var propType = getPropType(propValue);
-        if (propType === "object") {
-            if (propValue instanceof Date) return "date";
-            else if (propValue instanceof RegExp) return "regexp";
-        }
-        return propType;
-    }
-    // Returns a string that is postfixed to a warning about an invalid type.
-    // For example, "undefined" or "of type array"
-    function getPostfixForTypeWarning(value) {
-        var type = getPreciseType(value);
-        switch(type){
-            case "array":
-            case "object":
-                return "an " + type;
-            case "boolean":
-            case "date":
-            case "regexp":
-                return "a " + type;
-            default:
-                return type;
-        }
-    }
-    // Returns class name of the object, if any.
-    function getClassName(propValue) {
-        if (!propValue.constructor || !propValue.constructor.name) return ANONYMOUS;
-        return propValue.constructor.name;
-    }
-    ReactPropTypes.checkPropTypes = checkPropTypes;
-    ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
-    ReactPropTypes.PropTypes = ReactPropTypes;
-    return ReactPropTypes;
-};
-
-},{"c437388b089702c3":"7EuwB","c067a60101d8520c":"7OXxh","74a0f89a70b9f3c2":"jZTZJ","18441b11647bc78":"fqKuf","bec3f6ff89f0b072":"5VwyJ"}],"7OXxh":[function(require,module,exports) {
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/ "use strict";
-/* eslint-disable no-unused-vars */ var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-function toObject(val) {
-    if (val === null || val === undefined) throw new TypeError("Object.assign cannot be called with null or undefined");
-    return Object(val);
-}
-function shouldUseNative() {
-    try {
-        if (!Object.assign) return false;
-        // Detect buggy property enumeration order in older V8 versions.
-        // https://bugs.chromium.org/p/v8/issues/detail?id=4118
-        var test1 = new String("abc"); // eslint-disable-line no-new-wrappers
-        test1[5] = "de";
-        if (Object.getOwnPropertyNames(test1)[0] === "5") return false;
-        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-        var test2 = {};
-        for(var i = 0; i < 10; i++)test2["_" + String.fromCharCode(i)] = i;
-        var order2 = Object.getOwnPropertyNames(test2).map(function(n) {
-            return test2[n];
-        });
-        if (order2.join("") !== "0123456789") return false;
-        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-        var test3 = {};
-        "abcdefghijklmnopqrst".split("").forEach(function(letter) {
-            test3[letter] = letter;
-        });
-        if (Object.keys(Object.assign({}, test3)).join("") !== "abcdefghijklmnopqrst") return false;
-        return true;
-    } catch (err) {
-        // We don't expect any of the above to throw, but better to be safe.
-        return false;
-    }
-}
-module.exports = shouldUseNative() ? Object.assign : function(target, source) {
-    var from;
-    var to = toObject(target);
-    var symbols;
-    for(var s = 1; s < arguments.length; s++){
-        from = Object(arguments[s]);
-        for(var key in from)if (hasOwnProperty.call(from, key)) to[key] = from[key];
-        if (getOwnPropertySymbols) {
-            symbols = getOwnPropertySymbols(from);
-            for(var i = 0; i < symbols.length; i++)if (propIsEnumerable.call(from, symbols[i])) to[symbols[i]] = from[symbols[i]];
-        }
-    }
-    return to;
-};
-
-},{}],"jZTZJ":[function(require,module,exports) {
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-var ReactPropTypesSecret = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
-module.exports = ReactPropTypesSecret;
-
-},{}],"fqKuf":[function(require,module,exports) {
-module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
-
-},{}],"5VwyJ":[function(require,module,exports) {
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-var printWarning = function() {};
-var ReactPropTypesSecret = require("24ba1e58d167a82c");
-var loggedTypeFailures = {};
-var has = require("898bc82f39d83f7c");
-printWarning = function(text) {
-    var message = "Warning: " + text;
-    if (typeof console !== "undefined") console.error(message);
-    try {
-        // --- Welcome to debugging React ---
-        // This error was thrown as a convenience so that you can use this stack
-        // to find the callsite that caused this warning to fire.
-        throw new Error(message);
-    } catch (x) {}
-};
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-    for(var typeSpecName in typeSpecs)if (has(typeSpecs, typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-            // This is intentionally an invariant that gets caught. It's the same
-            // behavior as without this statement except with a better message.
-            if (typeof typeSpecs[typeSpecName] !== "function") {
-                var err = Error((componentName || "React class") + ": " + location + " type `" + typeSpecName + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + typeof typeSpecs[typeSpecName] + "`." + "This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                err.name = "Invariant Violation";
-                throw err;
-            }
-            error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-            error = ex;
-        }
-        if (error && !(error instanceof Error)) printWarning((componentName || "React class") + ": type specification of " + location + " `" + typeSpecName + "` is invalid; the type checker " + "function must return `null` or an `Error` but returned a " + typeof error + ". " + "You may have forgotten to pass an argument to the type checker " + "creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and " + "shape all require an argument).");
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-            // Only monitor this failure once because there tends to be a lot of the
-            // same error.
-            loggedTypeFailures[error.message] = true;
-            var stack = getStack ? getStack() : "";
-            printWarning("Failed " + location + " type: " + error.message + (stack != null ? stack : ""));
-        }
-    }
-}
-/**
- * Resets warning cache when testing.
- *
- * @private
- */ checkPropTypes.resetWarningCache = function() {
-    loggedTypeFailures = {};
-};
-module.exports = checkPropTypes;
-
-},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"8pPOA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Footer"
-    }, void 0, false, {
-        fileName: "src/components/Footer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5b98.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "You got into About using router"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 3,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "This is a basic food app, for your food devlivery. This is names as FoodHeaven"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 4,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/About.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = About;
-exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
-
-  $parcel$ReactRefreshHelpers$5b98.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8FX8S":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7345 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7345.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _s = $RefreshSig$();
-const ErrorPage = ()=>{
-    _s();
-    const Err = (0, _reactRouterDom.useRouteError)();
-    console.log(Err);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Oops!!!!!!!!!!!!!!!"
-            }, void 0, false, {
-                fileName: "src/components/ErrorPage.js",
-                lineNumber: 6,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Something went wrong!!!!!!!!!!!"
-            }, void 0, false, {
-                fileName: "src/components/ErrorPage.js",
-                lineNumber: 7,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: Err.status + " : " + Err.status
-            }, void 0, false, {
-                fileName: "src/components/ErrorPage.js",
-                lineNumber: 8,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(ErrorPage, "EyHQxge1qimOuO7ynajrXNQfCZc=", false, function() {
-    return [
-        (0, _reactRouterDom.useRouteError)
-    ];
-});
-_c = ErrorPage;
-exports.default = ErrorPage;
-var _c;
-$RefreshReg$(_c, "ErrorPage");
-
-  $parcel$ReactRefreshHelpers$7345.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.22.3
  *
@@ -38023,6 +33954,4273 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequire889b")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
+
+},{"7422ead32dcc1e6b":"786KC"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _restcard = require("./Restcard");
+var _restcardDefault = parcelHelpers.interopDefault(_restcard);
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _s = $RefreshSig$();
+function filterData(searchInput, allRest) {
+    const filterData = allRest.filter((restaurant)=>restaurant.info.name.toLowerCase().includes(searchInput.toLowerCase()));
+    return filterData;
+}
+const Body = ()=>{
+    _s();
+    const [allRest, setAllRest] = (0, _react.useState)([]);
+    //restInput--Data in cards, setRestdata-- function that is created by useState hook to change the state of the data
+    const [filteredData, setFilteredData] = (0, _react.useState)([]);
+    const [searchInput, setSearchInput] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        getRestfromapi();
+    }, []);
+    //useEffect(()=>{console.log("use effect is called")},[searchInput]) example of useeffect when searchinput is changed
+    //useEffect(()=>{console.log("use effect is called")},[]) If dependancy array is empty ,it is called only once
+    async function getRestfromapi() {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622536&lng=77.6979885&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        const arrayOfCards = json.data.cards;
+        const restaurant_list = "restaurant_grid_listing";
+        for (const cardObj of arrayOfCards)if (cardObj.card.card && cardObj.card.card.id === restaurant_list) {
+            const resData = cardObj.card?.card?.gridElements?.infoWithStyle?.restaurants;
+            console.log(resData);
+            setAllRest(resData);
+            setFilteredData(resData);
+        //setAllRest(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        }
+    }
+    return allRest.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 34,
+        columnNumber: 33
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "input-search",
+                        placeholder: "search",
+                        value: searchInput,
+                        onChange: (e)=>{
+                            setSearchInput(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "search-btn",
+                        onClick: ()=>{
+                            const data = filterData(searchInput, allRest);
+                            //console.log(data)
+                            setFilteredData(data);
+                        },
+                        children: "search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 35,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restcard",
+                children: filteredData.map((restaurant)=>restaurant.info ? /*#__PURE__*/ (0, _react.createElement)((0, _restcardDefault.default), {
+                        ...restaurant.info,
+                        key: restaurant.info.id,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 47,
+                            columnNumber: 57
+                        },
+                        __self: undefined
+                    }) : null)
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 46,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "6xck13W08xWV5LOafBJZV/7Xetg=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Restcard":"3vklx","./Shimmer":"g6ZGj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3vklx":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$06a9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$06a9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constants = require("../Constants");
+const Restcard = ({ cloudinaryImageId, name, cuisines, lastMileTravel })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _constants.CDN_URL) + cloudinaryImageId
+            }, void 0, false, {
+                fileName: "src/components/Restcard.js",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/Restcard.js",
+                lineNumber: 10,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines.join(", ")
+            }, void 0, false, {
+                fileName: "src/components/Restcard.js",
+                lineNumber: 11,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    lastMileTravel,
+                    " Miles away"
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Restcard.js",
+                lineNumber: 12,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Restcard.js",
+        lineNumber: 8,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Restcard;
+exports.default = Restcard;
+var _c;
+$RefreshReg$(_c, "Restcard");
+
+  $parcel$ReactRefreshHelpers$06a9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../Constants":"cGB5A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cGB5A":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
+parcelHelpers.export(exports, "resList", ()=>resList);
+const CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const resList = [
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "334475",
+            name: "KFC",
+            uuid: "eaed0e3b-7c0e-4367-8f59-f41d309fb93a",
+            city: "1",
+            area: "BTM Layout",
+            totalRatingsString: "500+ ratings",
+            cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
+            cuisines: [
+                "Burgers",
+                "Biryani",
+                "American",
+                "Snacks",
+                "Fast Food"
+            ],
+            tags: [],
+            costForTwo: 40000,
+            costForTwoString: "\u20B9400 FOR TWO",
+            deliveryTime: 36,
+            minDeliveryTime: 36,
+            maxDeliveryTime: 36,
+            slaString: "36 MINS",
+            lastMileTravel: 3.5,
+            slugs: {
+                restaurant: "kfc-btm-layout-btm",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "KFC restaurants, 942,SV Tower, 16th Main, BTM 2nd Stage ,560076",
+            locality: "2nd Stage",
+            parentId: 547,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6109309~p=1~eid=00000186-a341-249f-05e6-09c500910178",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "3.5 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "334475",
+                deliveryTime: 36,
+                minDeliveryTime: 36,
+                maxDeliveryTime: 36,
+                lastMileTravel: 3.5,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "3.8",
+            totalRatings: 500,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "229",
+            name: "Meghana Foods",
+            uuid: "4fdd19e2-5d0f-4bde-9c7f-dc3e8d36021f",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "xqwpuhgnsaf18te7zvtv",
+            cuisines: [
+                "Biryani",
+                "Andhra",
+                "South Indian",
+                "North Indian",
+                "Chinese",
+                "Seafood"
+            ],
+            tags: [],
+            costForTwo: 50000,
+            costForTwoString: "\u20B9500 FOR TWO",
+            deliveryTime: 29,
+            minDeliveryTime: 29,
+            maxDeliveryTime: 29,
+            slaString: "29 MINS",
+            lastMileTravel: 1.399999976158142,
+            slugs: {
+                restaurant: "meghana-foods-5th-block-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "124, Near Jyothi Nivas College, 1st Cross, KHB Colony, Koramangala 5th Block, Bangalore",
+            locality: "5th Block",
+            parentId: 635,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "229",
+                deliveryTime: 29,
+                minDeliveryTime: 29,
+                maxDeliveryTime: 29,
+                lastMileTravel: 1.399999976158142,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.4",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "121603",
+            name: "Kannur Food Point",
+            uuid: "51983905-e698-4e31-b0d7-e376eca56320",
+            city: "1",
+            area: "Tavarekere",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "bmwn4n4bn6n1tcpc8x2h",
+            cuisines: [
+                "Kerala",
+                "Chinese"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "\u20B9300 FOR TWO",
+            deliveryTime: 31,
+            minDeliveryTime: 31,
+            maxDeliveryTime: 31,
+            slaString: "31 MINS",
+            lastMileTravel: 3,
+            slugs: {
+                restaurant: "kannur-food-point-btm",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "6/21,9TH CROSS ,1ST MAIN, VENKATESHWARA LAYOUT,SG PALYA, BENGALURU, - 560093",
+            locality: "SG Palya",
+            parentId: 20974,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "50% off on all orders",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "50% off on all orders",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "50% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "50% off on all orders",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "121603",
+                deliveryTime: 31,
+                minDeliveryTime: 31,
+                maxDeliveryTime: 31,
+                lastMileTravel: 3,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.8",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "307050",
+            name: "Call Me Chow",
+            uuid: "b9bf2a17-faf9-4e4a-a6a7-61197d4bafa0",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "soegobqsiqvhmkfvnnkj",
+            cuisines: [
+                "Chinese",
+                "Pan-Asian"
+            ],
+            tags: [],
+            costForTwo: 40000,
+            costForTwoString: "\u20B9400 FOR TWO",
+            deliveryTime: 29,
+            minDeliveryTime: 29,
+            maxDeliveryTime: 29,
+            slaString: "29 MINS",
+            lastMileTravel: 1.5,
+            slugs: {
+                restaurant: "call-me-chow-koramangala-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "Call Me Chow, No. 364/A, Ground Floor, 3rd Cross, VSR Layout, Koramangala 8th Block, Bengaluru, Karnataka - 560095",
+            locality: "8th Block",
+            parentId: 18560,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "40% off",
+                shortDescriptionList: [
+                    {
+                        meta: "40% off | Use SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "40% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6108301~p=4~eid=00000186-a341-249f-05e6-09c600910432",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.5 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "307050",
+                deliveryTime: 29,
+                minDeliveryTime: 29,
+                maxDeliveryTime: 29,
+                lastMileTravel: 1.5,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "4.3",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "337335",
+            name: "Kannur food kitchen",
+            uuid: "c70b61bc-0f68-4e24-996b-749fbf295c35",
+            city: "1",
+            area: "BTM Layout",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "a27weqanhnszqiuzsoik",
+            cuisines: [
+                "Kerala",
+                "Biryani",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "\u20B9200 FOR TWO",
+            deliveryTime: 30,
+            minDeliveryTime: 30,
+            maxDeliveryTime: 30,
+            slaString: "30 MINS",
+            lastMileTravel: 2.5,
+            slugs: {
+                restaurant: "kannur-food-kitchen-btm-btm",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "kannur food point, Chocolate Factory Road, Tavarekere, Cashier Layout, 1st Stage, BTM Layout, thavrakharea, Karnataka, India",
+            locality: "1st  Stage",
+            parentId: 114756,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "50% off on all orders",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "50% off on all orders",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "50% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "50% off on all orders",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.5 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "337335",
+                deliveryTime: 30,
+                minDeliveryTime: 30,
+                maxDeliveryTime: 30,
+                lastMileTravel: 2.5,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.8",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "492159",
+            name: "Roti Wala",
+            uuid: "ada41f9b-cca3-4197-805c-8c43798919e9",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "100+ ratings",
+            cloudinaryImageId: "f99d05e4f7884caa8646c70b0b752c7a",
+            cuisines: [
+                "Home Food",
+                "North Indian",
+                "Thalis"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "\u20B9200 FOR TWO",
+            deliveryTime: 36,
+            minDeliveryTime: 36,
+            maxDeliveryTime: 36,
+            slaString: "36 MINS",
+            lastMileTravel: 1,
+            slugs: {
+                restaurant: "new-roti-wala-koramangala-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "No 18 ,MIG, KHB Colony, 5th Block, Koramangala, Bengaluru, Karnataka 560095, India",
+            locality: "5th Block",
+            parentId: 171678,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "20% off",
+                shortDescriptionList: [
+                    {
+                        meta: "20% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "20% off up to \u20B950 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "20% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "20% off up to \u20B950 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "492159",
+                deliveryTime: 36,
+                minDeliveryTime: 36,
+                maxDeliveryTime: 36,
+                lastMileTravel: 1,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.1",
+            totalRatings: 100,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "65797",
+            name: "Leon's - Burgers & Wings (Leon Grill)",
+            uuid: "b5747bab-748b-4f2d-8856-25cd9a49efb3",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "r4ufflqojich0r29efvc",
+            cuisines: [
+                "American",
+                "Snacks",
+                "Turkish",
+                "Portuguese",
+                "Continental"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "\u20B9300 FOR TWO",
+            deliveryTime: 29,
+            minDeliveryTime: 29,
+            maxDeliveryTime: 29,
+            slaString: "29 MINS",
+            lastMileTravel: 1.2999999523162842,
+            slugs: {
+                restaurant: "leon-grill-koramangala-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "Plot No.123 K.H.B Colony, 5th Block , Koramangala , Bangalore -95",
+            locality: "KHB Colony",
+            parentId: 371281,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "40% off",
+                shortDescriptionList: [
+                    {
+                        meta: "40% off | Use SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "40% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "40% off up to \u20B980 on select items | Use code SPECIALS",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6067111~p=7~eid=00000186-a341-249f-05e6-09c70091073f",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "65797",
+                deliveryTime: 29,
+                minDeliveryTime: 29,
+                maxDeliveryTime: 29,
+                lastMileTravel: 1.2999999523162842,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "4.3",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "425",
+            name: "Hotel Empire",
+            uuid: "c0c37758-2e83-4429-aad6-eb94debb48f5",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "un4omn7rcunkmlw6vikr",
+            cuisines: [
+                "North Indian",
+                "Kebabs",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 45000,
+            costForTwoString: "\u20B9450 FOR TWO",
+            deliveryTime: 30,
+            minDeliveryTime: 30,
+            maxDeliveryTime: 30,
+            slaString: "30 MINS",
+            lastMileTravel: 1.2999999523162842,
+            slugs: {
+                restaurant: "hotel-empire-5th-block-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "103, Industrial Area, 5th Block, Near Jyothi Nivas College, Koramangala 5th Block, Bangalore",
+            locality: "Koramangala",
+            parentId: 475,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "10% off",
+                shortDescriptionList: [
+                    {
+                        meta: "10% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to \u20B940 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "10% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to \u20B940 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "425",
+                deliveryTime: 30,
+                minDeliveryTime: 30,
+                maxDeliveryTime: 30,
+                lastMileTravel: 1.2999999523162842,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.1",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "428",
+            name: "Biryani Pot",
+            uuid: "6db20a8b-dd85-4148-b750-107169f7f826",
+            city: "1",
+            area: "Btm Layout",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "mdipoyzfzsa7n7igskht",
+            cuisines: [
+                "North Indian",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 50000,
+            costForTwoString: "\u20B9500 FOR TWO",
+            deliveryTime: 25,
+            minDeliveryTime: 25,
+            maxDeliveryTime: 25,
+            slaString: "25 MINS",
+            lastMileTravel: 1.899999976158142,
+            slugs: {
+                restaurant: "biryani-pot-madiwala-junction-btm",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "14th  Cross, 4th link Road Maruthi Nagar Madiwala Bangalore 68",
+            locality: "Maruti Nagar",
+            parentId: 21798,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "20% off",
+                shortDescriptionList: [
+                    {
+                        meta: "20% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "20% off up to \u20B950 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "20% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "20% off up to \u20B950 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "428",
+                deliveryTime: 25,
+                minDeliveryTime: 25,
+                maxDeliveryTime: 25,
+                lastMileTravel: 1.899999976158142,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.8",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "306639",
+            name: "The Coorg Food Co.",
+            uuid: "318c2c99-1173-42a8-b56c-f655e3cc5ffd",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "100+ ratings",
+            cloudinaryImageId: "ej90ytd5x7ffyl6ii7cn",
+            cuisines: [
+                "South Indian"
+            ],
+            tags: [],
+            costForTwo: 75000,
+            costForTwoString: "\u20B9750 FOR TWO",
+            deliveryTime: 28,
+            minDeliveryTime: 28,
+            maxDeliveryTime: 28,
+            slaString: "28 MINS",
+            lastMileTravel: 0.800000011920929,
+            slugs: {
+                restaurant: "the-coorg-food-co.-koramangala-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "No 466, Ground floor shop, 17th G main, 6th block, 80 feet road, opp BMTC Bus Depot, Koramangala, Bangalore",
+            locality: "6th Block",
+            parentId: 207214,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: "Closes soon"
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6092919~p=10~eid=00000186-a341-249f-05e6-09c800910a41",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "306639",
+                deliveryTime: 28,
+                minDeliveryTime: 28,
+                maxDeliveryTime: 28,
+                lastMileTravel: 0.800000011920929,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "4.3",
+            totalRatings: 100,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "63957",
+            name: "Madeena Hotel",
+            uuid: "da15d34a-cf0f-40a6-8600-096309bb578b",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "yc0asfa2j9elggstyjg4",
+            cuisines: [
+                "Biryani",
+                "Mughlai",
+                "Indian",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 25000,
+            costForTwoString: "\u20B9250 FOR TWO",
+            deliveryTime: 29,
+            minDeliveryTime: 29,
+            maxDeliveryTime: 29,
+            slaString: "29 MINS",
+            lastMileTravel: 1.399999976158142,
+            slugs: {
+                restaurant: "madeena-hotel-koramangala-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "# 20/A, 5th Block Kormangala ,Next To Masjid-E-Mamoor Banglore-95",
+            locality: "5th Block",
+            parentId: 12517,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "63957",
+                deliveryTime: 29,
+                minDeliveryTime: 29,
+                maxDeliveryTime: 29,
+                lastMileTravel: 1.399999976158142,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.1",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "71298",
+            name: "Bengali Fun Foods",
+            uuid: "a697d14f-c13a-49cb-8414-d12fa56bcc3b",
+            city: "1",
+            area: "BTM Layout",
+            totalRatingsString: "500+ ratings",
+            cloudinaryImageId: "ub9ng9le0lf7opxxbxey",
+            cuisines: [
+                "North Indian"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "\u20B9300 FOR TWO",
+            deliveryTime: 27,
+            minDeliveryTime: 27,
+            maxDeliveryTime: 27,
+            slaString: "27 MINS",
+            lastMileTravel: 2.700000047683716,
+            slugs: {
+                restaurant: "bengali-fun-foods-btm-btm",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "No 66 35th main outer ring road BTM 2nd stage beside central silk board Bangalore 5600076",
+            locality: "2nd Stage",
+            parentId: 2600,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "30% off",
+                shortDescriptionList: [
+                    {
+                        meta: "30% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "30% off up to \u20B975 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "30% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "30% off up to \u20B975 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6090726~p=13~eid=00000186-a341-249f-05e6-09c900910d3a",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.7 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "71298",
+                deliveryTime: 27,
+                minDeliveryTime: 27,
+                maxDeliveryTime: 27,
+                lastMileTravel: 2.700000047683716,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "4.3",
+            totalRatings: 500,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "59593",
+            name: "Al Daaz",
+            uuid: "c189b92c-d842-4595-9a1f-ff85bd67bc2a",
+            city: "1",
+            area: "Hsr Layout",
+            totalRatingsString: "100+ ratings",
+            cloudinaryImageId: "rxsvhvcdip9dbfdijzk9",
+            cuisines: [
+                "American",
+                "Arabian",
+                "Chinese",
+                "Desserts",
+                "Mughlai",
+                "North Indian"
+            ],
+            tags: [],
+            costForTwo: 40000,
+            costForTwoString: "\u20B9400 FOR TWO",
+            deliveryTime: 40,
+            minDeliveryTime: 40,
+            maxDeliveryTime: 40,
+            slaString: "40 MINS",
+            lastMileTravel: 4.400000095367432,
+            slugs: {
+                restaurant: "al-daaz-hsr-hsr",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "#64 & 65, 27th Main Rd, 1st Sector HSR Layout - 560102",
+            locality: "HSR",
+            parentId: 21640,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "4.4 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "59593",
+                deliveryTime: 40,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 40,
+                lastMileTravel: 4.400000095367432,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.3",
+            totalRatings: 100,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "5934",
+            name: "Burger King",
+            uuid: "ac56f2ac-71d3-4978-9513-b3aa68e25463",
+            city: "1",
+            area: "Koramangala",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "jpohkfkofao0hxez7vdh",
+            cuisines: [
+                "Burgers",
+                "American"
+            ],
+            tags: [],
+            costForTwo: 35000,
+            costForTwoString: "\u20B9350 FOR TWO",
+            deliveryTime: 31,
+            minDeliveryTime: 31,
+            maxDeliveryTime: 31,
+            slaString: "31 MINS",
+            lastMileTravel: 1.399999976158142,
+            slugs: {
+                restaurant: "burger-king-koramangala",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "Unit No. 1, Davar Atrium, Corporation No. 118, Koramangala Industrial Area 7th Block, Bangalore 560095",
+            locality: "7th Block",
+            parentId: 166,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "Get every item under 129",
+                shortDescriptionList: [
+                    {
+                        meta: "Get every item under 129",
+                        discountType: "FinalPrice",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "Get every item under 129",
+                        discountType: "FinalPrice",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "",
+                        discountType: "FinalPrice",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "Get every item under 129",
+                        discountType: "FinalPrice",
+                        operationType: "RESTAURANT"
+                    },
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "5934",
+                deliveryTime: 31,
+                minDeliveryTime: 31,
+                maxDeliveryTime: 31,
+                lastMileTravel: 1.399999976158142,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.2",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "365010",
+            name: "Hotel Salam",
+            uuid: "0a29b957-8817-4d4c-bc32-ca009921472d",
+            city: "1",
+            area: "Bommanahalli",
+            totalRatingsString: "500+ ratings",
+            cloudinaryImageId: "hgdmw8uwgewhiewwovjh",
+            cuisines: [
+                "Biryani",
+                "Tandoor",
+                "Arabian",
+                "Indian",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 25000,
+            costForTwoString: "\u20B9250 FOR TWO",
+            deliveryTime: 31,
+            minDeliveryTime: 31,
+            maxDeliveryTime: 31,
+            slaString: "31 MINS",
+            lastMileTravel: 4.699999809265137,
+            slugs: {
+                restaurant: "hotel-salam-hsr-hsr",
+                city: "bangalore"
+            },
+            cityState: "1",
+            address: "43/1,OPP.Salarpuria Serenity ,M G Palya Main Road, Bangalore-560068",
+            locality: "M G Palya",
+            parentId: 101873,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FLAT100 off",
+                shortDescriptionList: [
+                    {
+                        meta: "FLAT100 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FLAT100 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "\u20B9100 OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FLAT100 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "4.6 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "365010",
+                deliveryTime: 31,
+                minDeliveryTime: 31,
+                maxDeliveryTime: 31,
+                lastMileTravel: 4.699999809265137,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.9",
+            totalRatings: 500,
+            new: false
+        },
+        subtype: "basic"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactShimmerEffects = require("react-shimmer-effects");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactShimmerEffects.ShimmerSimpleGallery), {
+            card: true,
+            imageHeight: 300
+        }, void 0, false, {
+            fileName: "src/components/Shimmer.js",
+            lineNumber: 5,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-shimmer-effects":"5ORgO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5ORgO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ShimmerButton", ()=>ShimmerButton);
+parcelHelpers.export(exports, "ShimmerCircularImage", ()=>ShimmerCircularImage);
+parcelHelpers.export(exports, "ShimmerThumbnail", ()=>ShimmerThumbnail);
+parcelHelpers.export(exports, "ShimmerCard", ()=>ShimmerCard);
+parcelHelpers.export(exports, "ShimmerSimpleGallery", ()=>ShimmerSimpleGallery);
+parcelHelpers.export(exports, "ShimmerFeaturedGallery", ()=>ShimmerFeaturedGallery);
+parcelHelpers.export(exports, "ShimmerTable", ()=>ShimmerTable);
+parcelHelpers.export(exports, "ShimmerTableCol", ()=>ShimmerTableCol);
+parcelHelpers.export(exports, "ShimmerTableRow", ()=>ShimmerTableRow);
+parcelHelpers.export(exports, "ShimmerBadge", ()=>ShimmerBadge);
+parcelHelpers.export(exports, "ShimmerText", ()=>ShimmerText);
+parcelHelpers.export(exports, "ShimmerTitle", ()=>ShimmerTitle);
+parcelHelpers.export(exports, "ShimmerSocialPost", ()=>ShimmerSocialPost);
+parcelHelpers.export(exports, "ShimmerSeparator", ()=>ShimmerSeparator);
+parcelHelpers.export(exports, "ShimmerCategoryItem", ()=>ShimmerCategoryItem);
+parcelHelpers.export(exports, "ShimmerCategoryList", ()=>ShimmerCategoryList);
+parcelHelpers.export(exports, "ShimmerPostItem", ()=>ShimmerPostItem);
+parcelHelpers.export(exports, "ShimmerPostDetails", ()=>ShimmerPostDetails);
+parcelHelpers.export(exports, "ShimmerPostList", ()=>ShimmerPostList);
+parcelHelpers.export(exports, "ShimmerContentBlock", ()=>ShimmerContentBlock);
+parcelHelpers.export(exports, "ShimmerSectionHeader", ()=>ShimmerSectionHeader);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+function createCommonjsModule(fn, module) {
+    return module = {
+        exports: {}
+    }, fn(module, module.exports), module.exports;
+}
+var classnames = createCommonjsModule(function(module) {
+    /*!
+  Copyright (c) 2018 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/ /* global define */ (function() {
+        var hasOwn = {}.hasOwnProperty;
+        function classNames() {
+            var classes = [];
+            for(var i = 0; i < arguments.length; i++){
+                var arg = arguments[i];
+                if (!arg) continue;
+                var argType = typeof arg;
+                if (argType === "string" || argType === "number") classes.push(arg);
+                else if (Array.isArray(arg)) {
+                    if (arg.length) {
+                        var inner = classNames.apply(null, arg);
+                        if (inner) classes.push(inner);
+                    }
+                } else if (argType === "object") {
+                    if (arg.toString === Object.prototype.toString) {
+                        for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
+                    } else classes.push(arg.toString());
+                }
+            }
+            return classes.join(" ");
+        }
+        if (module.exports) {
+            classNames.default = classNames;
+            module.exports = classNames;
+        } else window.classNames = classNames;
+    })();
+});
+function styleInject(css, ref) {
+    if (ref === void 0) ref = {};
+    var insertAt = ref.insertAt;
+    if (!css || typeof document === "undefined") return;
+    var head = document.head || document.getElementsByTagName("head")[0];
+    var style = document.createElement("style");
+    style.type = "text/css";
+    if (insertAt === "top") {
+        if (head.firstChild) head.insertBefore(style, head.firstChild);
+        else head.appendChild(style);
+    } else head.appendChild(style);
+    if (style.styleSheet) style.styleSheet.cssText = css;
+    else style.appendChild(document.createTextNode(css));
+}
+var css = ".shimmer-button {\n  border-radius: 4px;\n  height: 38px;\n  width: 120px;\n  margin-bottom: 20px; }\n  .shimmer-button--sm {\n    border-radius: 3px;\n    height: 31px;\n    width: 100px; }\n  .shimmer-button--lg {\n    height: 48px;\n    width: 140px;\n    border-radius: 5px; }\n";
+styleInject(css);
+var defineProperty = function(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+};
+var ShimmerButton = function ShimmerButton(_ref) {
+    var size = _ref.size;
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames(defineProperty({
+            "shimmer shimmer-button": true
+        }, "shimmer-button--" + size, true))
+    });
+};
+ShimmerButton.propTypes = {
+    size: (0, _propTypesDefault.default).oneOf([
+        "lg",
+        "md",
+        "sm"
+    ])
+};
+ShimmerButton.defaultProps = {
+    size: "md"
+};
+var ShimmerCircularImage = function ShimmerCircularImage(_ref) {
+    var size = _ref.size, center = _ref.center, className = _ref.className;
+    var style = {};
+    if (size) {
+        style.width = size + "px";
+        style.height = size + "px";
+    }
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames({
+            "text-center": center
+        })
+    }, (0, _reactDefault.default).createElement("div", {
+        style: style,
+        className: classnames(defineProperty({
+            "shimmer shimmer-avatar": true
+        }, className, className))
+    }));
+};
+ShimmerCircularImage.propTypes = {
+    size: (0, _propTypesDefault.default).number,
+    center: (0, _propTypesDefault.default).bool,
+    className: (0, _propTypesDefault.default).string
+};
+ShimmerCircularImage.defaultProps = {
+    center: false,
+    size: 80
+};
+var ShimmerThumbnail = function ShimmerThumbnail(_ref) {
+    var height = _ref.height, width = _ref.width, center = _ref.center, className = _ref.className, fitOnFrame = _ref.fitOnFrame, rounded = _ref.rounded;
+    var style = {};
+    if (height) style.height = height + "px";
+    if (width) style.width = width + "px";
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames({
+            "h-100": fitOnFrame,
+            "text-center ": center
+        })
+    }, (0, _reactDefault.default).createElement("div", {
+        className: classnames(defineProperty({
+            "h-100": fitOnFrame,
+            "shimmer shimmer-thumbnail": true,
+            "border-rounded": rounded
+        }, className, className)),
+        style: style
+    }));
+};
+ShimmerThumbnail.propTypes = {
+    height: (0, _propTypesDefault.default).number,
+    width: (0, _propTypesDefault.default).number,
+    center: (0, _propTypesDefault.default).bool,
+    className: (0, _propTypesDefault.default).string,
+    fitOnFrame: (0, _propTypesDefault.default).bool,
+    rounded: (0, _propTypesDefault.default).bool
+};
+ShimmerThumbnail.defaultProps = {
+    canter: false,
+    fitOnFrame: false,
+    rounded: false,
+    height: 250
+};
+var css$1 = ".shimmer-avatar {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  margin-bottom: 20px;\n  display: inline-block; }\n\n.shimmer-thumbnail {\n  min-width: 80px;\n  width: 100%;\n  height: 200px;\n  margin-bottom: 20px;\n  display: inline-block; }\n";
+styleInject(css$1);
+var css$2 = ".shimmer-title {\n  margin-bottom: 20px; }\n  .shimmer-title--secondary {\n    margin-bottom: 20px; }\n    .shimmer-title--secondary .shimmer-title-line {\n      height: 16px; }\n  .shimmer-title-line {\n    width: 100%;\n    height: 24px;\n    border-radius: 20px; }\n    .shimmer-title-line:first-child {\n      width: 100% !important; }\n    .shimmer-title-line:last-child {\n      width: 40%; }\n";
+styleInject(css$2);
+var ShimmerTitle = function ShimmerTitle(_ref) {
+    var _classNames;
+    var line = _ref.line, gap = _ref.gap, variant = _ref.variant, className = _ref.className;
+    var renderLines = function renderLines() {
+        var title_lines = [];
+        for(var index = 0; index < line; index++)title_lines.push((0, _reactDefault.default).createElement("div", {
+            className: "shimmer shimmer-title-line",
+            key: index
+        }));
+        return title_lines;
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames((_classNames = {
+            grid: true,
+            "shimmer-title": variant === "primary",
+            "shimmer-title--secondary": variant === "secondary"
+        }, defineProperty(_classNames, "grid-gap-" + gap, gap), defineProperty(_classNames, className, className), _classNames))
+    }, renderLines());
+};
+ShimmerTitle.propTypes = {
+    line: (0, _propTypesDefault.default).number,
+    gap: (0, _propTypesDefault.default).oneOf([
+        10,
+        15,
+        20,
+        30
+    ]),
+    variant: (0, _propTypesDefault.default).oneOf([
+        "primary",
+        "secondary"
+    ]),
+    className: (0, _propTypesDefault.default).string
+};
+ShimmerTitle.defaultProps = {
+    line: 2,
+    gap: 10,
+    variant: "primary"
+};
+var css$3 = ".shimmer-card {\n  border-radius: 8px;\n  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);\n  background-color: #ffffff;\n  width: 100%; }\n  .shimmer-card:not(:first-child) {\n    margin-top: 30px; }\n  .shimmer-card--content-center {\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    .shimmer-card--content-center * {\n      width: 100%;\n      margin: auto; }\n";
+styleInject(css$3);
+var ShimmerCard = function ShimmerCard(_ref) {
+    var _classNames;
+    var children = _ref.children, className = _ref.className, paddingSize = _ref.paddingSize;
+    if (!children) return null;
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames((_classNames = {
+            "shimmer-card": true
+        }, defineProperty(_classNames, "p-" + paddingSize, paddingSize), defineProperty(_classNames, className, className), _classNames))
+    }, children);
+};
+ShimmerCard.propTypes = {
+    className: (0, _propTypesDefault.default).string,
+    children: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).element,
+        (0, _propTypesDefault.default).array
+    ]).isRequired,
+    paddingSize: (0, _propTypesDefault.default).oneOf([
+        false,
+        20,
+        30
+    ])
+};
+ShimmerCard.defaultProps = {
+    paddingSize: false
+};
+var ShimmerSimpleGallery = function ShimmerSimpleGallery(_ref) {
+    var _classNames, _classNames2;
+    var row = _ref.row, col = _ref.col, gap = _ref.gap, className = _ref.className, fitOnFrame = _ref.fitOnFrame, imageType = _ref.imageType, imageHeight = _ref.imageHeight, caption = _ref.caption, card = _ref.card;
+    var renderPhotos = function renderPhotos() {
+        var photos = [];
+        var items = row * col;
+        for(var index = 0; index < items; index++)photos.push((0, _reactDefault.default).createElement("div", {
+            key: index
+        }, imageType === "thumbnail" && (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+            key: index,
+            fitOnFrame: fitOnFrame,
+            height: imageHeight,
+            className: classnames({
+                "m-0": true
+            })
+        }), imageType === "circular" && (0, _reactDefault.default).createElement(ShimmerCircularImage, {
+            size: imageHeight,
+            center: true
+        }), caption && (0, _reactDefault.default).createElement(ShimmerTitle, {
+            variant: "secondary",
+            className: classnames({
+                "mt-15": imageType === "thumbnail",
+                "w-50 ml-auto mr-auto circular-image-caption": imageType === "circular"
+            })
+        })));
+        return photos;
+    };
+    if (!card) return (0, _reactDefault.default).createElement("div", {
+        className: classnames((_classNames = {
+            grid: true
+        }, defineProperty(_classNames, "grid-gap-" + gap, true), defineProperty(_classNames, "grid-column-" + col, true), defineProperty(_classNames, className, className), _classNames))
+    }, renderPhotos());
+    return (0, _reactDefault.default).createElement(ShimmerCard, {
+        paddingSize: 20
+    }, (0, _reactDefault.default).createElement("div", {
+        className: classnames((_classNames2 = {
+            grid: true
+        }, defineProperty(_classNames2, "grid-gap-" + gap, true), defineProperty(_classNames2, "grid-column-" + col, true), defineProperty(_classNames2, className, className), _classNames2))
+    }, renderPhotos()));
+};
+ShimmerSimpleGallery.propTypes = {
+    row: (0, _propTypesDefault.default).number,
+    col: (0, _propTypesDefault.default).oneOf([
+        2,
+        3,
+        4
+    ]),
+    gap: (0, _propTypesDefault.default).oneOf([
+        20,
+        30
+    ]),
+    fitOnFrame: (0, _propTypesDefault.default).bool,
+    imageType: (0, _propTypesDefault.default).oneOf([
+        "thumbnail",
+        "circular"
+    ]),
+    imageHeight: (0, _propTypesDefault.default).number,
+    caption: (0, _propTypesDefault.default).bool,
+    card: (0, _propTypesDefault.default).bool
+};
+ShimmerSimpleGallery.defaultProps = {
+    row: 3,
+    col: 3,
+    gap: 20,
+    fitOnFrame: false,
+    imageType: "thumbnail",
+    caption: false,
+    card: false
+};
+var css$4 = ".shimmer-gallery-puzzle {\n  height: 540px; }\n\n.circular-image-caption .shimmer-title-line {\n  margin: auto; }\n";
+styleInject(css$4);
+var ShimmerFeaturedGallery = function ShimmerFeaturedGallery(_ref) {
+    var row = _ref.row, col = _ref.col, gap = _ref.gap, card = _ref.card, frameHeight = _ref.frameHeight;
+    var style = {};
+    if (frameHeight) style.height = frameHeight + "px";
+    var renderContent = function renderContent() {
+        return (0, _reactDefault.default).createElement("div", {
+            className: "shimmer-row shimmer-gallery-puzzle",
+            style: style
+        }, (0, _reactDefault.default).createElement("div", {
+            className: "shimmer-col flex-1"
+        }, (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+            className: "h-100",
+            fitOnFrame: true
+        })), (0, _reactDefault.default).createElement("div", {
+            className: "shimmer-col flex-1"
+        }, (0, _reactDefault.default).createElement(ShimmerSimpleGallery, {
+            row: row,
+            col: col,
+            gap: gap,
+            className: "h-100",
+            fitOnFrame: true
+        })));
+    };
+    if (!card) return renderContent();
+    return (0, _reactDefault.default).createElement(ShimmerCard, {
+        paddingSize: 20
+    }, renderContent());
+};
+ShimmerFeaturedGallery.propTypes = {
+    row: (0, _propTypesDefault.default).number,
+    col: (0, _propTypesDefault.default).oneOf([
+        2,
+        3,
+        4
+    ]),
+    gap: (0, _propTypesDefault.default).oneOf([
+        20,
+        30
+    ]),
+    card: (0, _propTypesDefault.default).bool,
+    frameHeight: (0, _propTypesDefault.default).number
+};
+ShimmerFeaturedGallery.defaultProps = {
+    card: false,
+    row: 2,
+    col: 2,
+    gap: 20,
+    frameHeight: 600
+};
+var ShimmerTableCol = function ShimmerTableCol() {
+    return (0, _reactDefault.default).createElement("div", {
+        className: "shimmer shimmer-table-col"
+    });
+};
+var ShimmerTableRow = function ShimmerTableRow(_ref) {
+    var col = _ref.col, header = _ref.header;
+    var renderColumns = function renderColumns() {
+        var columns = [];
+        for(var index = 0; index < col; index++)columns.push((0, _reactDefault.default).createElement(ShimmerTableCol, {
+            key: index
+        }));
+        return columns;
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames({
+            "shimmer-table-row": true,
+            "shimmer-table-row--header": header
+        })
+    }, renderColumns());
+};
+ShimmerTableRow.propTypes = {
+    col: (0, _propTypesDefault.default).number.isRequired,
+    header: (0, _propTypesDefault.default).bool
+};
+ShimmerTableRow.defaultProps = {
+    col: 5,
+    header: false
+};
+var css$5 = ".shimmer-table-row {\n  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);\n  display: flex;\n  padding: 25px 0;\n  background-color: #ffffff;\n  border-radius: 5px;\n  margin-bottom: 20px; }\n  .shimmer-table-row--header {\n    background-color: transparent;\n    box-shadow: none;\n    margin: 0; }\n  .shimmer-table-row > .shimmer {\n    margin: 0 30px; }\n\n.shimmer-table-col {\n  width: 100%;\n  height: 10px;\n  border-radius: 10px; }\n";
+styleInject(css$5);
+var ShimmerTable = function ShimmerTable(_ref) {
+    var row = _ref.row, col = _ref.col;
+    var renderRows = function renderRows() {
+        var rows = [];
+        for(var index = 0; index < row; index++)rows.push((0, _reactDefault.default).createElement(ShimmerTableRow, {
+            col: col,
+            key: index
+        }));
+        return rows;
+    };
+    return (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTableRow, {
+        col: col,
+        header: true
+    }), renderRows());
+};
+ShimmerTable.propTypes = {
+    row: (0, _propTypesDefault.default).number,
+    col: (0, _propTypesDefault.default).number
+};
+ShimmerTable.defaultProps = {
+    row: 5,
+    col: 5
+};
+var css$6 = ".shimmer-badge {\n  width: 80px;\n  height: 24px;\n  border-radius: 20px;\n  margin-bottom: 20px; }\n";
+styleInject(css$6);
+var ShimmerBadge = function ShimmerBadge(_ref) {
+    var width = _ref.width;
+    var style = {};
+    if (width) style.width = width + "px";
+    return (0, _reactDefault.default).createElement("div", {
+        className: "shimmer shimmer-badge",
+        style: style
+    });
+};
+ShimmerBadge.propTypes = {
+    width: (0, _propTypesDefault.default).number
+};
+var css$7 = ".shimmer-text {\n  margin-bottom: 30px; }\n  .shimmer-text-line {\n    width: 100%;\n    height: 8px;\n    border-radius: 10px; }\n    .shimmer-text-line:first-child {\n      width: 100% !important; }\n    .shimmer-text-line:last-child {\n      width: 40%; }\n";
+styleInject(css$7);
+var ShimmerText = function ShimmerText(_ref) {
+    var _classNames;
+    var line = _ref.line, gap = _ref.gap, className = _ref.className;
+    var renderLines = function renderLines() {
+        var text_lines = [];
+        for(var index = 0; index < line; index++)text_lines.push((0, _reactDefault.default).createElement("div", {
+            className: "shimmer shimmer-text-line",
+            key: index
+        }));
+        return text_lines;
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames((_classNames = {
+            "grid shimmer-text": true
+        }, defineProperty(_classNames, "grid-gap-" + gap, gap), defineProperty(_classNames, className, className), _classNames))
+    }, renderLines());
+};
+ShimmerText.propTypes = {
+    line: (0, _propTypesDefault.default).number,
+    gap: (0, _propTypesDefault.default).oneOf([
+        10,
+        15,
+        20,
+        30
+    ]),
+    className: (0, _propTypesDefault.default).string
+};
+ShimmerText.defaultProps = {
+    line: 5,
+    gap: 15
+};
+var css$8 = ".shimmer-separator {\n  height: 1px;\n  background-color: #dddddd;\n  margin: 40px 0; }\n";
+styleInject(css$8);
+var ShimmerSeparator = function ShimmerSeparator() {
+    return (0, _reactDefault.default).createElement("div", {
+        className: "shimmer-separator"
+    });
+};
+var ShimmerSocialPost = function ShimmerSocialPost(_ref) {
+    var type = _ref.type, title = _ref.title;
+    var renderContents = function renderContents() {
+        if (type === "image") return (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+            height: 300,
+            className: "m-02"
+        });
+        else if (type === "text") return (0, _reactDefault.default).createElement(ShimmerText, {
+            line: 13,
+            className: "p-15"
+        });
+        else return (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerText, {
+            line: 3,
+            className: "p-15"
+        }), (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+            height: 300,
+            className: "m-02"
+        }));
+    };
+    return (0, _reactDefault.default).createElement(ShimmerCard, null, (0, _reactDefault.default).createElement("div", {
+        className: "p-15"
+    }, (0, _reactDefault.default).createElement("div", {
+        className: "flex"
+    }, (0, _reactDefault.default).createElement(ShimmerCircularImage, null), (0, _reactDefault.default).createElement("div", {
+        className: "flex-1 p-15"
+    }, (0, _reactDefault.default).createElement(ShimmerTitle, {
+        variant: "secondary",
+        className: "w-40"
+    }))), title && (0, _reactDefault.default).createElement(ShimmerTitle, {
+        line: 1,
+        className: "w-40 m-0"
+    })), renderContents(), (0, _reactDefault.default).createElement("div", {
+        className: "p-15 flex flex-content-between"
+    }, (0, _reactDefault.default).createElement(ShimmerTitle, {
+        line: 1,
+        className: "w-10",
+        variant: "secondary"
+    }), (0, _reactDefault.default).createElement(ShimmerTitle, {
+        line: 1,
+        className: "w-10",
+        variant: "secondary"
+    })));
+};
+ShimmerSocialPost.propTypes = {
+    type: (0, _propTypesDefault.default).oneOf([
+        "text",
+        "image",
+        "both"
+    ]),
+    title: (0, _propTypesDefault.default).bool
+};
+ShimmerSocialPost.defaultProps = {
+    type: "image",
+    title: false
+};
+var ShimmerCategoryItem = function ShimmerCategoryItem(_ref) {
+    var hasImage = _ref.hasImage, imageType = _ref.imageType, imageWidth = _ref.imageWidth, imageHeight = _ref.imageHeight, title = _ref.title, text = _ref.text, cta = _ref.cta, contentCenter = _ref.contentCenter;
+    return (0, _reactDefault.default).createElement("div", null, !hasImage ? (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTitle, {
+        variant: "secondary",
+        line: 1,
+        className: "mb-15 w-80"
+    }), (0, _reactDefault.default).createElement("div", {
+        className: "w-40"
+    }, (0, _reactDefault.default).createElement(ShimmerText, {
+        line: 3,
+        gap: 10
+    }))) : (0, _reactDefault.default).createElement("div", {
+        className: classnames({
+            flex: true,
+            "flex-vertical-center": contentCenter
+        })
+    }, imageType === "thumbnail" && (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+        width: imageWidth,
+        height: imageHeight
+    }), imageType === "circular" && (0, _reactDefault.default).createElement(ShimmerCircularImage, {
+        size: imageWidth
+    }), (0, _reactDefault.default).createElement("div", {
+        className: "flex-1 p-15"
+    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
+        variant: "secondary"
+    }), text && (0, _reactDefault.default).createElement(ShimmerText, {
+        line: 3,
+        gap: 10,
+        className: "mb-20"
+    }), cta && (0, _reactDefault.default).createElement(ShimmerButton, {
+        size: "sm"
+    }))));
+};
+ShimmerCategoryItem.propTypes = {
+    hasImage: (0, _propTypesDefault.default).bool.isRequired,
+    imageType: (0, _propTypesDefault.default).oneOf([
+        "circular",
+        "thumbnail"
+    ]),
+    imageWidth: (0, _propTypesDefault.default).number,
+    imageHeight: (0, _propTypesDefault.default).number,
+    title: (0, _propTypesDefault.default).bool,
+    text: (0, _propTypesDefault.default).bool,
+    cta: (0, _propTypesDefault.default).bool,
+    contentCenter: (0, _propTypesDefault.default).bool
+};
+ShimmerCategoryItem.defaultProps = {
+    hasImage: false,
+    imageType: "thumbnail",
+    title: false,
+    text: false,
+    contentCenter: false
+};
+var ShimmerCategoryList = function ShimmerCategoryList(_ref) {
+    var items = _ref.items, categoryStyle = _ref.categoryStyle, title = _ref.title;
+    var categories = {
+        STYLE_ONE: (0, _reactDefault.default).createElement(ShimmerCategoryItem, null),
+        STYLE_TWO: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
+            hasImage: true,
+            imageType: "thumbnail",
+            imageWidth: 100,
+            imageHeight: 100,
+            title: true
+        }),
+        STYLE_THREE: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
+            hasImage: true,
+            imageType: "circular",
+            imageWidth: 100,
+            imageHeight: 100,
+            title: true
+        }),
+        STYLE_FOUR: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
+            hasImage: true,
+            imageType: "thumbnail",
+            imageWidth: 100,
+            imageHeight: 100,
+            text: true
+        }),
+        STYLE_FIVE: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
+            hasImage: true,
+            imageType: "circular",
+            imageWidth: 100,
+            imageHeight: 100,
+            text: true
+        }),
+        STYLE_SIX: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
+            hasImage: true,
+            imageType: "thumbnail",
+            imageWidth: 100,
+            imageHeight: 100,
+            text: true,
+            cta: true
+        }),
+        STYLE_SEVEN: (0, _reactDefault.default).createElement(ShimmerCategoryItem, {
+            hasImage: true,
+            imageType: "circular",
+            imageWidth: 100,
+            imageHeight: 100,
+            text: true,
+            cta: true
+        })
+    };
+    var renderItems = function renderItems() {
+        var list = [];
+        for(var index = 0; index < items; index++)list.push((0, _reactDefault.default).createElement("div", {
+            key: index
+        }, categories[categoryStyle]));
+        return list;
+    };
+    return (0, _reactDefault.default).createElement(ShimmerCard, {
+        paddingSize: 20
+    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
+        line: 1,
+        className: "w-60"
+    }), renderItems());
+};
+ShimmerCategoryList.propTypes = {
+    title: (0, _propTypesDefault.default).bool,
+    items: (0, _propTypesDefault.default).number,
+    categoryStyle: (0, _propTypesDefault.default).oneOf([
+        "STYLE_ONE",
+        "STYLE_TWO",
+        "STYLE_THREE",
+        "STYLE_FOUR",
+        "STYLE_FIVE",
+        "STYLE_SIX",
+        "STYLE_SEVEN"
+    ])
+};
+ShimmerCategoryList.defaultProps = {
+    title: false,
+    items: 5,
+    categoryStyle: "STYLE_ONE"
+};
+var ShimmerPostDetails = function ShimmerPostDetails(_ref) {
+    var variant = _ref.variant, cta = _ref.cta, card = _ref.card;
+    var variants = {
+        SIMPLE: (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTitle, {
+            line: 1,
+            className: "w-40"
+        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
+            line: 1,
+            variant: "secondary",
+            className: "w-20 mb-40"
+        }), (0, _reactDefault.default).createElement("div", {
+            className: "w-40 mb-40"
+        }, (0, _reactDefault.default).createElement(ShimmerText, {
+            line: 1,
+            className: "mb-15 w-20"
+        }), (0, _reactDefault.default).createElement(ShimmerText, {
+            line: 1,
+            className: "mb-15 w-40"
+        }), (0, _reactDefault.default).createElement(ShimmerText, {
+            line: 1,
+            className: "mb-30 w-60"
+        })), (0, _reactDefault.default).createElement(ShimmerTitle, {
+            line: 1,
+            variant: "secondary",
+            className: "w-30"
+        }), (0, _reactDefault.default).createElement(ShimmerText, {
+            className: "mb-40"
+        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
+            line: 1,
+            variant: "secondary",
+            className: "w-30"
+        }), (0, _reactDefault.default).createElement(ShimmerText, {
+            className: "mb-40"
+        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
+            line: 1,
+            variant: "secondary",
+            className: "w-30"
+        }), (0, _reactDefault.default).createElement(ShimmerText, {
+            className: "mb-40"
+        }), (0, _reactDefault.default).createElement(ShimmerTitle, {
+            line: 1,
+            variant: "secondary",
+            className: "w-30"
+        }), (0, _reactDefault.default).createElement(ShimmerText, {
+            className: "mb-40"
+        }), cta && (0, _reactDefault.default).createElement(ShimmerButton, null)),
+        EDITOR: (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement(ShimmerTitle, {
+            line: 1,
+            className: "w-40"
+        }), (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+            height: 400
+        }), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement("div", {
+            className: "shimmer-row"
+        }, (0, _reactDefault.default).createElement("div", {
+            className: "shimmer-col"
+        }, (0, _reactDefault.default).createElement(ShimmerText, {
+            line: 13
+        })), (0, _reactDefault.default).createElement("div", {
+            className: "shimmer-col"
+        }, (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+            height: 300
+        }))), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement(ShimmerText, null), (0, _reactDefault.default).createElement(ShimmerText, null))
+    };
+    if (!card) return variants[variant];
+    return (0, _reactDefault.default).createElement(ShimmerCard, {
+        paddingSize: 30
+    }, variants[variant]);
+};
+ShimmerPostDetails.propTypes = {
+    variant: (0, _propTypesDefault.default).oneOf([
+        "SIMPLE",
+        "EDITOR"
+    ]),
+    cta: (0, _propTypesDefault.default).bool,
+    card: (0, _propTypesDefault.default).bool
+};
+ShimmerPostDetails.defaultProps = {
+    variant: "SIMPLE",
+    cta: false,
+    card: false
+};
+var ShimmerPostItem = function ShimmerPostItem(_ref) {
+    var cta = _ref.cta, title = _ref.title, text = _ref.text, imageType = _ref.imageType, imageWidth = _ref.imageWidth, imageHeight = _ref.imageHeight;
+    return (0, _reactDefault.default).createElement(ShimmerCard, null, imageType === "thumbnail" && (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+        height: imageHeight,
+        width: imageWidth,
+        className: imageWidth && imageWidth !== "w-100" ? "m-30 mb-0" : "mb-0"
+    }), imageType === "circular" && (0, _reactDefault.default).createElement(ShimmerCircularImage, {
+        size: imageWidth,
+        className: "m-30 mb-0"
+    }), (0, _reactDefault.default).createElement("div", {
+        className: "p-30"
+    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
+        variant: "secondary"
+    }), text && (0, _reactDefault.default).createElement(ShimmerText, {
+        line: 3,
+        gap: 10
+    }), cta && (0, _reactDefault.default).createElement(ShimmerButton, {
+        size: "sm"
+    })));
+};
+ShimmerPostItem.propTypes = {
+    title: (0, _propTypesDefault.default).bool,
+    text: (0, _propTypesDefault.default).bool,
+    cta: (0, _propTypesDefault.default).bool,
+    imageType: (0, _propTypesDefault.default).oneOf([
+        "circular",
+        "thumbnail"
+    ]),
+    imageHeight: (0, _propTypesDefault.default).number,
+    imageWidth: (0, _propTypesDefault.default).number
+};
+ShimmerPostItem.defaultProps = {
+    title: false,
+    text: false,
+    cta: false,
+    imageType: "thumbnail"
+};
+var ShimmerPostList = function ShimmerPostList(_ref) {
+    var _classNames;
+    var row = _ref.row, col = _ref.col, gap = _ref.gap, className = _ref.className, postStyle = _ref.postStyle;
+    var posts = {
+        STYLE_ONE: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            title: true,
+            text: true,
+            cta: true
+        }),
+        STYLE_TWO: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            title: true,
+            cta: true
+        }),
+        STYLE_THREE: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            title: true
+        }),
+        STYLE_FOUR: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            text: true,
+            cta: true
+        }),
+        STYLE_FIVE: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            text: true
+        }),
+        STYLE_SIX: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            title: true,
+            text: true,
+            cta: true,
+            imageType: "thumbnail",
+            imageWidth: 80,
+            imageHeight: 80,
+            contentCenter: true
+        }),
+        STYLE_SEVEN: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            text: true,
+            cta: true,
+            imageType: "thumbnail",
+            imageWidth: 80,
+            imageHeight: 80,
+            contentCenter: true
+        }),
+        STYLE_EIGHT: (0, _reactDefault.default).createElement(ShimmerPostItem, {
+            title: true,
+            cta: true,
+            imageType: "thumbnail",
+            imageWidth: 80,
+            imageHeight: 80,
+            contentCenter: true
+        })
+    };
+    var renderPosts = function renderPosts() {
+        var list = [];
+        var items = row * col;
+        for(var index = 0; index < items; index++)list.push((0, _reactDefault.default).createElement("div", {
+            key: index
+        }, posts[postStyle]));
+        return list;
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames((_classNames = {
+            grid: true
+        }, defineProperty(_classNames, "grid-gap-" + gap, true), defineProperty(_classNames, "grid-column-" + col, true), defineProperty(_classNames, className, className), _classNames))
+    }, renderPosts());
+};
+ShimmerPostList.propTypes = {
+    row: (0, _propTypesDefault.default).number,
+    col: (0, _propTypesDefault.default).oneOf([
+        2,
+        3,
+        4
+    ]),
+    gap: (0, _propTypesDefault.default).oneOf([
+        20,
+        30
+    ]),
+    postStyle: (0, _propTypesDefault.default).oneOf([
+        "STYLE_ONE",
+        "STYLE_TWO",
+        "STYLE_THREE",
+        "STYLE_FOUR",
+        "STYLE_FIVE",
+        "STYLE_SIX",
+        "STYLE_SEVEN",
+        "STYLE_EIGHT"
+    ])
+};
+ShimmerPostList.defaultProps = {
+    row: 3,
+    col: 3,
+    gap: 20,
+    postStyle: "STYLE_ONE"
+};
+var ShimmerContentBlock = function ShimmerContentBlock(_ref) {
+    var card = _ref.card, title = _ref.title, text = _ref.text, cta = _ref.cta, thumbnailWidth = _ref.thumbnailWidth, thumbnailHeight = _ref.thumbnailHeight, reverse = _ref.reverse;
+    var renderContent = function renderContent() {
+        return (0, _reactDefault.default).createElement("div", {
+            className: classnames({
+                flex: true,
+                "flex-reverse": reverse
+            })
+        }, (0, _reactDefault.default).createElement("div", {
+            className: classnames({
+                flex: true,
+                "w-50": !thumbnailWidth
+            })
+        }, (0, _reactDefault.default).createElement(ShimmerThumbnail, {
+            width: thumbnailWidth,
+            height: thumbnailHeight,
+            className: "h-100 m-0"
+        })), (0, _reactDefault.default).createElement("div", {
+            className: " flex-1 p-30"
+        }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
+            className: "w-40",
+            line: 1
+        }), text && (0, _reactDefault.default).createElement(ShimmerText, null), cta && (0, _reactDefault.default).createElement(ShimmerButton, null)));
+    };
+    if (!card) return renderContent();
+    return (0, _reactDefault.default).createElement(ShimmerCard, null, renderContent());
+};
+ShimmerContentBlock.propTypes = {
+    card: (0, _propTypesDefault.default).bool,
+    title: (0, _propTypesDefault.default).bool,
+    text: (0, _propTypesDefault.default).bool,
+    cta: (0, _propTypesDefault.default).bool,
+    thumbnailWidth: (0, _propTypesDefault.default).number,
+    thumbnailHeight: (0, _propTypesDefault.default).number,
+    reverse: (0, _propTypesDefault.default).bool
+};
+ShimmerContentBlock.defaultProps = {
+    card: true,
+    title: false,
+    text: false,
+    cta: false,
+    reverse: false
+};
+var ShimmerSectionHeader = function ShimmerSectionHeader(_ref) {
+    var title = _ref.title, subTitle = _ref.subTitle, center = _ref.center;
+    if (!title && !subTitle) return null;
+    return (0, _reactDefault.default).createElement("div", {
+        className: classnames({
+            "w-60 mb-40": true,
+            "ml-auto mr-auto": center
+        })
+    }, title && (0, _reactDefault.default).createElement(ShimmerTitle, {
+        className: classnames({
+            "w-40": true,
+            "ml-auto mr-auto": center
+        }),
+        line: 1
+    }), subTitle && (0, _reactDefault.default).createElement("div", {
+        className: classnames({
+            "flex-horizontal-center": center
+        })
+    }, (0, _reactDefault.default).createElement(ShimmerText, {
+        line: 1,
+        className: "mb-15 w-80"
+    }), (0, _reactDefault.default).createElement(ShimmerText, {
+        line: 1,
+        className: "mb-15 w-70"
+    }), (0, _reactDefault.default).createElement(ShimmerText, {
+        line: 1,
+        className: "mb-15 w-60"
+    })));
+};
+ShimmerSectionHeader.propTypes = {
+    title: (0, _propTypesDefault.default).bool,
+    subTitle: (0, _propTypesDefault.default).bool,
+    center: (0, _propTypesDefault.default).bool
+};
+ShimmerSectionHeader.defaultProps = {
+    title: true,
+    subTitle: true,
+    center: false
+};
+var css$9 = '.shimmer {\n  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);\n  background-size: 1000px 100%;\n  animation: shimmer 2.2s linear infinite forwards; }\n\n@-webkit-keyframes shimmer {\n  0% {\n    background-position: -100% 0; }\n  100% {\n    background-position: 100% 0; } }\n\n@keyframes shimmer {\n  0% {\n    background-position: -1000px 0; }\n  100% {\n    background-position: 1000px 0; } }\n\n/*\n=====\nPadding Styles\n=====\n*/\n.p-30 {\n  padding: 30px; }\n\n.p-20 {\n  padding: 20px; }\n\n.p-15 {\n  padding: 15px; }\n\n/*\n=====\nMargin Styles\n=====\n*/\n.m-0 {\n  margin: 0; }\n\n.m-auto {\n  margin: auto; }\n\n.ml-auto {\n  margin-left: auto; }\n\n.mr-auto {\n  margin-right: auto; }\n\n.m-15 {\n  margin: 15px; }\n\n.m-30 {\n  margin: 30px; }\n\n.mb-0 {\n  margin-bottom: 0px; }\n\n.mb-10 {\n  margin-bottom: 10px; }\n\n.mb-15 {\n  margin-bottom: 15px; }\n\n.mb-20 {\n  margin-bottom: 20px; }\n\n.mt-15 {\n  margin-top: 15px; }\n\n.mb-30 {\n  margin-bottom: 30px; }\n\n.mb-40 {\n  margin-bottom: 40px; }\n\n/*\n=======\nContent Size Styles\n=======\n*/\n.w-10 {\n  width: 10%; }\n\n.w-20 {\n  width: 20%; }\n\n.w-30 {\n  width: 30%; }\n\n.w-40 {\n  width: 40%; }\n\n.w-50 {\n  width: 50%; }\n\n.w-60 {\n  width: 60%; }\n\n.w-70 {\n  width: 70%; }\n\n.w-80 {\n  width: 80%; }\n\n/*\n========\nFlex Styles\n========\n*/\n.flex {\n  display: flex; }\n\n.flex-direction-column {\n  flex-direction: column; }\n\n.flex-horizontal-center {\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n\n.flex-vertical-center {\n  align-items: center; }\n\n.flex-content-between {\n  justify-content: space-between; }\n\n.flex-reverse {\n  flex-direction: row-reverse; }\n\n.flex-1 {\n  flex-grow: 1; }\n\n/*\n=======\nGrid Styles\n=======\n*/\n.grid {\n  display: grid; }\n\n.grid-gap-10 {\n  gap: 10px; }\n\n.grid-gap-15 {\n  gap: 15px; }\n\n.grid-gap-20 {\n  gap: 20px; }\n\n.grid-gap-30 {\n  gap: 30px; }\n\n.grid-column-2 {\n  grid-template-columns: auto auto; }\n\n.grid-column-3 {\n  grid-template-columns: auto auto auto; }\n\n.grid-column-4 {\n  grid-template-columns: auto auto auto auto; }\n\n.text-center {\n  text-align: center; }\n\n.border-rounded {\n  border-radius: 4px; }\n\n.h-100 {\n  height: 100% !important; }\n\n.shimmer-hr {\n  border-color: #f6f6f6; }\n\n.shimmer-row {\n  display: flex;\n  margin: 0 -15px; }\n  .shimmer-row .shimmer-col,\n  .shimmer-row [class*="shimmer-col-"] {\n    padding-left: 15px;\n    padding-right: 15px;\n    flex-basis: 0;\n    flex-grow: 1;\n    max-width: 100%; }\n';
+styleInject(css$9);
+
+},{"react":"21dqq","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7wKI2":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ var ReactIs = require("96e34ae03f5a2631");
+// By explicitly using `prop-types` you are opting into new development behavior.
+// http://fb.me/prop-types-in-prod
+var throwOnDirectAccess = true;
+module.exports = require("cb216452e2171041")(ReactIs.isElement, throwOnDirectAccess);
+
+},{"96e34ae03f5a2631":"7EuwB","cb216452e2171041":"bBUgD"}],"7EuwB":[function(require,module,exports) {
+"use strict";
+module.exports = require("2255125a8e8b1051");
+
+},{"2255125a8e8b1051":"5DsXl"}],"5DsXl":[function(require,module,exports) {
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+(function() {
+    "use strict";
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var hasSymbol = typeof Symbol === "function" && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for("react.element") : 0xeac7;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for("react.portal") : 0xeaca;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for("react.fragment") : 0xeacb;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for("react.strict_mode") : 0xeacc;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for("react.profiler") : 0xead2;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for("react.provider") : 0xeacd;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for("react.context") : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for("react.async_mode") : 0xeacf;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for("react.concurrent_mode") : 0xeacf;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for("react.forward_ref") : 0xead0;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for("react.suspense") : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for("react.suspense_list") : 0xead8;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for("react.memo") : 0xead3;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for("react.lazy") : 0xead4;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for("react.block") : 0xead9;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for("react.fundamental") : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for("react.responder") : 0xead6;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for("react.scope") : 0xead7;
+    function isValidElementType(type) {
+        return typeof type === "string" || typeof type === "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+        type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === "object" && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+    function typeOf(object) {
+        if (typeof object === "object" && object !== null) {
+            var $$typeof = object.$$typeof;
+            switch($$typeof){
+                case REACT_ELEMENT_TYPE:
+                    var type = object.type;
+                    switch(type){
+                        case REACT_ASYNC_MODE_TYPE:
+                        case REACT_CONCURRENT_MODE_TYPE:
+                        case REACT_FRAGMENT_TYPE:
+                        case REACT_PROFILER_TYPE:
+                        case REACT_STRICT_MODE_TYPE:
+                        case REACT_SUSPENSE_TYPE:
+                            return type;
+                        default:
+                            var $$typeofType = type && type.$$typeof;
+                            switch($$typeofType){
+                                case REACT_CONTEXT_TYPE:
+                                case REACT_FORWARD_REF_TYPE:
+                                case REACT_LAZY_TYPE:
+                                case REACT_MEMO_TYPE:
+                                case REACT_PROVIDER_TYPE:
+                                    return $$typeofType;
+                                default:
+                                    return $$typeof;
+                            }
+                    }
+                case REACT_PORTAL_TYPE:
+                    return $$typeof;
+            }
+        }
+        return undefined;
+    } // AsyncMode is deprecated along with isAsyncMode
+    var AsyncMode = REACT_ASYNC_MODE_TYPE;
+    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+    function isAsyncMode(object) {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+            hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+            console["warn"]("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.");
+        }
+        return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+    }
+    function isConcurrentMode(object) {
+        return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+    }
+    function isContextConsumer(object) {
+        return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+    function isContextProvider(object) {
+        return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+    function isElement(object) {
+        return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    function isForwardRef(object) {
+        return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+    function isFragment(object) {
+        return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+    function isLazy(object) {
+        return typeOf(object) === REACT_LAZY_TYPE;
+    }
+    function isMemo(object) {
+        return typeOf(object) === REACT_MEMO_TYPE;
+    }
+    function isPortal(object) {
+        return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+    function isProfiler(object) {
+        return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+    function isStrictMode(object) {
+        return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+    function isSuspense(object) {
+        return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+})();
+
+},{}],"bBUgD":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var ReactIs = require("c437388b089702c3");
+var assign = require("c067a60101d8520c");
+var ReactPropTypesSecret = require("74a0f89a70b9f3c2");
+var has = require("18441b11647bc78");
+var checkPropTypes = require("bec3f6ff89f0b072");
+var printWarning = function() {};
+printWarning = function(text) {
+    var message = "Warning: " + text;
+    if (typeof console !== "undefined") console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {}
+};
+function emptyFunctionThatReturnsNull() {
+    return null;
+}
+module.exports = function(isValidElement, throwOnDirectAccess) {
+    /* global Symbol */ var ITERATOR_SYMBOL = typeof Symbol === "function" && Symbol.iterator;
+    var FAUX_ITERATOR_SYMBOL = "@@iterator"; // Before Symbol spec.
+    /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */ function getIteratorFn(maybeIterable) {
+        var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+        if (typeof iteratorFn === "function") return iteratorFn;
+    }
+    /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */ var ANONYMOUS = "<<anonymous>>";
+    // Important!
+    // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+    var ReactPropTypes = {
+        array: createPrimitiveTypeChecker("array"),
+        bigint: createPrimitiveTypeChecker("bigint"),
+        bool: createPrimitiveTypeChecker("boolean"),
+        func: createPrimitiveTypeChecker("function"),
+        number: createPrimitiveTypeChecker("number"),
+        object: createPrimitiveTypeChecker("object"),
+        string: createPrimitiveTypeChecker("string"),
+        symbol: createPrimitiveTypeChecker("symbol"),
+        any: createAnyTypeChecker(),
+        arrayOf: createArrayOfTypeChecker,
+        element: createElementTypeChecker(),
+        elementType: createElementTypeTypeChecker(),
+        instanceOf: createInstanceTypeChecker,
+        node: createNodeChecker(),
+        objectOf: createObjectOfTypeChecker,
+        oneOf: createEnumTypeChecker,
+        oneOfType: createUnionTypeChecker,
+        shape: createShapeTypeChecker,
+        exact: createStrictShapeTypeChecker
+    };
+    /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */ /*eslint-disable no-self-compare*/ function is(x, y) {
+        // SameValue algorithm
+        if (x === y) // Steps 1-5, 7-10
+        // Steps 6.b-6.e: +0 != -0
+        return x !== 0 || 1 / x === 1 / y;
+        else // Step 6.a: NaN == NaN
+        return x !== x && y !== y;
+    }
+    /*eslint-enable no-self-compare*/ /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */ function PropTypeError(message, data) {
+        this.message = message;
+        this.data = data && typeof data === "object" ? data : {};
+        this.stack = "";
+    }
+    // Make `instanceof Error` still work for returned errors.
+    PropTypeError.prototype = Error.prototype;
+    function createChainableTypeChecker(validate) {
+        var manualPropTypeCallCache = {};
+        var manualPropTypeWarningCount = 0;
+        function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+            componentName = componentName || ANONYMOUS;
+            propFullName = propFullName || propName;
+            if (secret !== ReactPropTypesSecret) {
+                if (throwOnDirectAccess) {
+                    // New behavior only for users of `prop-types` package
+                    var err = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");
+                    err.name = "Invariant Violation";
+                    throw err;
+                } else if (typeof console !== "undefined") {
+                    // Old behavior for people using React.PropTypes
+                    var cacheKey = componentName + ":" + propName;
+                    if (!manualPropTypeCallCache[cacheKey] && // Avoid spamming the console because they are often not actionable except for lib authors
+                    manualPropTypeWarningCount < 3) {
+                        printWarning("You are manually calling a React.PropTypes validation function for the `" + propFullName + "` prop on `" + componentName + "`. This is deprecated " + "and will throw in the standalone `prop-types` package. " + "You may be seeing this warning due to a third-party PropTypes " + "library. See https://fb.me/react-warning-dont-call-proptypes " + "for details.");
+                        manualPropTypeCallCache[cacheKey] = true;
+                        manualPropTypeWarningCount++;
+                    }
+                }
+            }
+            if (props[propName] == null) {
+                if (isRequired) {
+                    if (props[propName] === null) return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required " + ("in `" + componentName + "`, but its value is `null`."));
+                    return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required in " + ("`" + componentName + "`, but its value is `undefined`."));
+                }
+                return null;
+            } else return validate(props, propName, componentName, location, propFullName);
+        }
+        var chainedCheckType = checkType.bind(null, false);
+        chainedCheckType.isRequired = checkType.bind(null, true);
+        return chainedCheckType;
+    }
+    function createPrimitiveTypeChecker(expectedType) {
+        function validate(props, propName, componentName, location, propFullName, secret) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== expectedType) {
+                // `propValue` being instance of, say, date/regexp, pass the 'object'
+                // check, but we can offer a more precise error message here rather than
+                // 'of type `object`'.
+                var preciseType = getPreciseType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + preciseType + "` supplied to `" + componentName + "`, expected ") + ("`" + expectedType + "`."), {
+                    expectedType: expectedType
+                });
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createAnyTypeChecker() {
+        return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+    }
+    function createArrayOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside arrayOf.");
+            var propValue = props[propName];
+            if (!Array.isArray(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an array."));
+            }
+            for(var i = 0; i < propValue.length; i++){
+                var error = typeChecker(propValue, i, componentName, location, propFullName + "[" + i + "]", ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!isValidElement(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!ReactIs.isValidElementType(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement type."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createInstanceTypeChecker(expectedClass) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!(props[propName] instanceof expectedClass)) {
+                var expectedClassName = expectedClass.name || ANONYMOUS;
+                var actualClassName = getClassName(props[propName]);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + actualClassName + "` supplied to `" + componentName + "`, expected ") + ("instance of `" + expectedClassName + "`."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createEnumTypeChecker(expectedValues) {
+        if (!Array.isArray(expectedValues)) {
+            {
+                if (arguments.length > 1) printWarning("Invalid arguments supplied to oneOf, expected an array, got " + arguments.length + " arguments. " + "A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).");
+                else printWarning("Invalid argument supplied to oneOf, expected an array.");
+            }
+            return emptyFunctionThatReturnsNull;
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            for(var i = 0; i < expectedValues.length; i++){
+                if (is(propValue, expectedValues[i])) return null;
+            }
+            var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+                var type = getPreciseType(value);
+                if (type === "symbol") return String(value);
+                return value;
+            });
+            return new PropTypeError("Invalid " + location + " `" + propFullName + "` of value `" + String(propValue) + "` " + ("supplied to `" + componentName + "`, expected one of " + valuesString + "."));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createObjectOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside objectOf.");
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an object."));
+            for(var key in propValue)if (has(propValue, key)) {
+                var error = typeChecker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createUnionTypeChecker(arrayOfTypeCheckers) {
+        if (!Array.isArray(arrayOfTypeCheckers)) {
+            printWarning("Invalid argument supplied to oneOfType, expected an instance of array.");
+            return emptyFunctionThatReturnsNull;
+        }
+        for(var i = 0; i < arrayOfTypeCheckers.length; i++){
+            var checker = arrayOfTypeCheckers[i];
+            if (typeof checker !== "function") {
+                printWarning("Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + getPostfixForTypeWarning(checker) + " at index " + i + ".");
+                return emptyFunctionThatReturnsNull;
+            }
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            var expectedTypes = [];
+            for(var i = 0; i < arrayOfTypeCheckers.length; i++){
+                var checker = arrayOfTypeCheckers[i];
+                var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
+                if (checkerResult == null) return null;
+                if (checkerResult.data && has(checkerResult.data, "expectedType")) expectedTypes.push(checkerResult.data.expectedType);
+            }
+            var expectedTypesMessage = expectedTypes.length > 0 ? ", expected one of type [" + expectedTypes.join(", ") + "]" : "";
+            return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`" + expectedTypesMessage + "."));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createNodeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!isNode(props[propName])) return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`, expected a ReactNode."));
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function invalidValidatorError(componentName, location, propFullName, key, type) {
+        return new PropTypeError((componentName || "React class") + ": " + location + " type `" + propFullName + "." + key + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + type + "`.");
+    }
+    function createShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
+            for(var key in shapeTypes){
+                var checker = shapeTypes[key];
+                if (typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createStrictShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
+            // We need to check all keys in case some are required but missing from props.
+            var allKeys = assign({}, props[propName], shapeTypes);
+            for(var key in allKeys){
+                var checker = shapeTypes[key];
+                if (has(shapeTypes, key) && typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+                if (!checker) return new PropTypeError("Invalid " + location + " `" + propFullName + "` key `" + key + "` supplied to `" + componentName + "`." + "\nBad object: " + JSON.stringify(props[propName], null, "  ") + "\nValid keys: " + JSON.stringify(Object.keys(shapeTypes), null, "  "));
+                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function isNode(propValue) {
+        switch(typeof propValue){
+            case "number":
+            case "string":
+            case "undefined":
+                return true;
+            case "boolean":
+                return !propValue;
+            case "object":
+                if (Array.isArray(propValue)) return propValue.every(isNode);
+                if (propValue === null || isValidElement(propValue)) return true;
+                var iteratorFn = getIteratorFn(propValue);
+                if (iteratorFn) {
+                    var iterator = iteratorFn.call(propValue);
+                    var step;
+                    if (iteratorFn !== propValue.entries) while(!(step = iterator.next()).done){
+                        if (!isNode(step.value)) return false;
+                    }
+                    else // Iterator will provide entry [k,v] tuples rather than values.
+                    while(!(step = iterator.next()).done){
+                        var entry = step.value;
+                        if (entry) {
+                            if (!isNode(entry[1])) return false;
+                        }
+                    }
+                } else return false;
+                return true;
+            default:
+                return false;
+        }
+    }
+    function isSymbol(propType, propValue) {
+        // Native Symbol.
+        if (propType === "symbol") return true;
+        // falsy value can't be a Symbol
+        if (!propValue) return false;
+        // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+        if (propValue["@@toStringTag"] === "Symbol") return true;
+        // Fallback for non-spec compliant Symbols which are polyfilled.
+        if (typeof Symbol === "function" && propValue instanceof Symbol) return true;
+        return false;
+    }
+    // Equivalent of `typeof` but with special handling for array and regexp.
+    function getPropType(propValue) {
+        var propType = typeof propValue;
+        if (Array.isArray(propValue)) return "array";
+        if (propValue instanceof RegExp) // Old webkits (at least until Android 4.0) return 'function' rather than
+        // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+        // passes PropTypes.object.
+        return "object";
+        if (isSymbol(propType, propValue)) return "symbol";
+        return propType;
+    }
+    // This handles more types than `getPropType`. Only used for error messages.
+    // See `createPrimitiveTypeChecker`.
+    function getPreciseType(propValue) {
+        if (typeof propValue === "undefined" || propValue === null) return "" + propValue;
+        var propType = getPropType(propValue);
+        if (propType === "object") {
+            if (propValue instanceof Date) return "date";
+            else if (propValue instanceof RegExp) return "regexp";
+        }
+        return propType;
+    }
+    // Returns a string that is postfixed to a warning about an invalid type.
+    // For example, "undefined" or "of type array"
+    function getPostfixForTypeWarning(value) {
+        var type = getPreciseType(value);
+        switch(type){
+            case "array":
+            case "object":
+                return "an " + type;
+            case "boolean":
+            case "date":
+            case "regexp":
+                return "a " + type;
+            default:
+                return type;
+        }
+    }
+    // Returns class name of the object, if any.
+    function getClassName(propValue) {
+        if (!propValue.constructor || !propValue.constructor.name) return ANONYMOUS;
+        return propValue.constructor.name;
+    }
+    ReactPropTypes.checkPropTypes = checkPropTypes;
+    ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
+    ReactPropTypes.PropTypes = ReactPropTypes;
+    return ReactPropTypes;
+};
+
+},{"c437388b089702c3":"7EuwB","c067a60101d8520c":"7OXxh","74a0f89a70b9f3c2":"jZTZJ","18441b11647bc78":"fqKuf","bec3f6ff89f0b072":"5VwyJ"}],"7OXxh":[function(require,module,exports) {
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/ "use strict";
+/* eslint-disable no-unused-vars */ var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+function toObject(val) {
+    if (val === null || val === undefined) throw new TypeError("Object.assign cannot be called with null or undefined");
+    return Object(val);
+}
+function shouldUseNative() {
+    try {
+        if (!Object.assign) return false;
+        // Detect buggy property enumeration order in older V8 versions.
+        // https://bugs.chromium.org/p/v8/issues/detail?id=4118
+        var test1 = new String("abc"); // eslint-disable-line no-new-wrappers
+        test1[5] = "de";
+        if (Object.getOwnPropertyNames(test1)[0] === "5") return false;
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test2 = {};
+        for(var i = 0; i < 10; i++)test2["_" + String.fromCharCode(i)] = i;
+        var order2 = Object.getOwnPropertyNames(test2).map(function(n) {
+            return test2[n];
+        });
+        if (order2.join("") !== "0123456789") return false;
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test3 = {};
+        "abcdefghijklmnopqrst".split("").forEach(function(letter) {
+            test3[letter] = letter;
+        });
+        if (Object.keys(Object.assign({}, test3)).join("") !== "abcdefghijklmnopqrst") return false;
+        return true;
+    } catch (err) {
+        // We don't expect any of the above to throw, but better to be safe.
+        return false;
+    }
+}
+module.exports = shouldUseNative() ? Object.assign : function(target, source) {
+    var from;
+    var to = toObject(target);
+    var symbols;
+    for(var s = 1; s < arguments.length; s++){
+        from = Object(arguments[s]);
+        for(var key in from)if (hasOwnProperty.call(from, key)) to[key] = from[key];
+        if (getOwnPropertySymbols) {
+            symbols = getOwnPropertySymbols(from);
+            for(var i = 0; i < symbols.length; i++)if (propIsEnumerable.call(from, symbols[i])) to[symbols[i]] = from[symbols[i]];
+        }
+    }
+    return to;
+};
+
+},{}],"jZTZJ":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var ReactPropTypesSecret = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+module.exports = ReactPropTypesSecret;
+
+},{}],"fqKuf":[function(require,module,exports) {
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
+
+},{}],"5VwyJ":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var printWarning = function() {};
+var ReactPropTypesSecret = require("24ba1e58d167a82c");
+var loggedTypeFailures = {};
+var has = require("898bc82f39d83f7c");
+printWarning = function(text) {
+    var message = "Warning: " + text;
+    if (typeof console !== "undefined") console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {}
+};
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+    for(var typeSpecName in typeSpecs)if (has(typeSpecs, typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+            // This is intentionally an invariant that gets caught. It's the same
+            // behavior as without this statement except with a better message.
+            if (typeof typeSpecs[typeSpecName] !== "function") {
+                var err = Error((componentName || "React class") + ": " + location + " type `" + typeSpecName + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + typeof typeSpecs[typeSpecName] + "`." + "This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                err.name = "Invariant Violation";
+                throw err;
+            }
+            error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+            error = ex;
+        }
+        if (error && !(error instanceof Error)) printWarning((componentName || "React class") + ": type specification of " + location + " `" + typeSpecName + "` is invalid; the type checker " + "function must return `null` or an `Error` but returned a " + typeof error + ". " + "You may have forgotten to pass an argument to the type checker " + "creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and " + "shape all require an argument).");
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+            // Only monitor this failure once because there tends to be a lot of the
+            // same error.
+            loggedTypeFailures[error.message] = true;
+            var stack = getStack ? getStack() : "";
+            printWarning("Failed " + location + " type: " + error.message + (stack != null ? stack : ""));
+        }
+    }
+}
+/**
+ * Resets warning cache when testing.
+ *
+ * @private
+ */ checkPropTypes.resetWarningCache = function() {
+    loggedTypeFailures = {};
+};
+module.exports = checkPropTypes;
+
+},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Footer"
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5b98.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _profile = require("./Profile");
+var _profileDefault = parcelHelpers.interopDefault(_profile);
+const About = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "You got into About using router"
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 4,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "This is a basic food app, for your food devlivery. This is named as FoodHeaven"
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/About.js",
+        lineNumber: 3,
+        columnNumber: 10
+    }, undefined);
+};
+_c = About;
+exports.default = About;
+var _c;
+$RefreshReg$(_c, "About");
+
+  $parcel$ReactRefreshHelpers$5b98.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Profile":"h0rtF"}],"h0rtF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b52a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b52a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Profile = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            children: "Profile Component"
+        }, void 0, false, {
+            fileName: "src/components/Profile.js",
+            lineNumber: 3,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Profile.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Profile;
+exports.default = Profile;
+var _c;
+$RefreshReg$(_c, "Profile");
+
+  $parcel$ReactRefreshHelpers$b52a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8FX8S":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7345 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7345.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const ErrorPage = ()=>{
+    _s();
+    const Err = (0, _reactRouterDom.useRouteError)();
+    console.log(Err);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Oops!!!!!!!!!!!!!!!"
+            }, void 0, false, {
+                fileName: "src/components/ErrorPage.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Something went wrong!!!!!!!!!!!"
+            }, void 0, false, {
+                fileName: "src/components/ErrorPage.js",
+                lineNumber: 7,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: Err.status + " : " + Err.statusText
+            }, void 0, false, {
+                fileName: "src/components/ErrorPage.js",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(ErrorPage, "EyHQxge1qimOuO7ynajrXNQfCZc=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
+_c = ErrorPage;
+exports.default = ErrorPage;
+var _c;
+$RefreshReg$(_c, "ErrorPage");
+
+  $parcel$ReactRefreshHelpers$7345.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ee46.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "This is CONTACT Page"
+    }, void 0, false, {
+        fileName: "src/components/Contact.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$ee46.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8PuJ6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$40d6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$40d6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _s = $RefreshSig$();
+const RestaurantMenu = ()=>{
+    _s();
+    const { resid } = (0, _reactRouterDom.useParams)();
+    // const[restaurant,setRestaurant]=useState();
+    // useEffect(()=>{
+    //     getRestaurantInfo()
+    // },[]);
+    // async function getRestaurantInfo(){
+    //     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622536&lng=77.6979885&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    //     const json = await data.json();
+    //     console.log(json.data);
+    //     setRestaurant(json.data);
+    // }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: [
+                "restaurant id= ",
+                resid
+            ]
+        }, void 0, true, {
+            fileName: "src/components/RestaurantMenu.js",
+            lineNumber: 22,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/RestaurantMenu.js",
+        lineNumber: 21,
+        columnNumber: 10
+    }, undefined);
+};
+_s(RestaurantMenu, "Fz2nvFaa+0H9Dvldc9EnPelA1gc=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
+_c = RestaurantMenu;
+exports.default = RestaurantMenu;
+var _c;
+$RefreshReg$(_c, "RestaurantMenu");
+
+  $parcel$ReactRefreshHelpers$40d6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequire889b")
 
 //# sourceMappingURL=index.7271efb6.js.map

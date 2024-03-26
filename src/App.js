@@ -7,6 +7,7 @@ import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Profile from "./components/Profile";
 import { createBrowserRouter,RouterProvider, Outlet } from "react-router-dom";
 
 
@@ -31,7 +32,13 @@ const AppLayout=() =>{
       },
       {
         path:"/about",
-        element:<About/>
+        element:<About/>,
+        children:[
+          {
+            path:"profile",
+            element:<Profile/>
+          }
+        ]
       },
       {
         path:"/contact",
