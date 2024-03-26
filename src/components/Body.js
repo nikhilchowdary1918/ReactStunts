@@ -19,7 +19,6 @@ const Body= () =>{
     async function getRestfromapi(){
       const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622536&lng=77.6979885&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       const json = await data.json();
-      console.log(json)
       const arrayOfCards = json.data.cards; 
       const restaurant_list = "restaurant_grid_listing";
       for (const cardObj of arrayOfCards) { 

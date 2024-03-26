@@ -7,7 +7,7 @@ const ErrorPage=() =>{
         <>
         <h1>Oops!!!!!!!!!!!!!!!</h1>
         <h2>Something went wrong!!!!!!!!!!!</h2>
-        <h3>{Err.status + " : " + Err.status}</h3>
+        <h3>{Err.status + " : " + Err.statusText}</h3>
         </>
     )
 }
