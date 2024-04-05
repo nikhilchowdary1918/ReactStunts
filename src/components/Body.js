@@ -1,6 +1,7 @@
 import Restcard from "./Restcard";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 function filterData(searchInput,allRest){
   const filterData= allRest.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchInput.toLowerCase()));
@@ -25,7 +26,7 @@ const Body= () =>{
         if (cardObj.card.card && cardObj.card.card.id === restaurant_list) 
         { 
           const resData = cardObj.card?.card?.gridElements?.infoWithStyle?.restaurants;
-          console.log(resData)
+          //console.log(resData)
           setAllRest(resData)
           setFilteredData(resData)
       //setAllRest(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -56,9 +57,11 @@ const Body= () =>{
       </div>
       <div className="restcard">
       {
-        filteredData.map((restaurant) => (
-        restaurant.info ? <Restcard {...restaurant.info} key={restaurant.info.id}/> : null
-        ))
+        filteredData.map((restaurant) =>{ 
+          return (
+            restaurant.info ? <Link to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}><Restcard {...restaurant.info} /></Link> : null
+        );
+      })
       }
       </div>
 

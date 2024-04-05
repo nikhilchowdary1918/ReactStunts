@@ -1,11 +1,11 @@
 import { CDN_URL } from "../Constants";
-const Restcard=({cloudinaryImageId,name,cuisines,lastMileTravel})=>{
+const Restcard=({cloudinaryImageId,name,cuisines,lastMileTravel,areaName,})=>{
     return(
       <div className="card">
         <img src={ CDN_URL + cloudinaryImageId}/>
         <h2>{name}</h2>
-        <h3>{cuisines.join(", ")}</h3>
-        <h4>{lastMileTravel} Miles away</h4>
+        <h4>{cuisines.join(", ")}</h4>
+        <h4>{areaName}</h4>
       </div>
     )
   }

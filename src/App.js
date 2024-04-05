@@ -45,7 +45,7 @@ const AppLayout=() =>{
         element:<Contact/>
       },
       {
-        path:"/restmenu/:resid",
+        path:"/restaurant/:resId",
         element:<RestaurantMenu/>
       }
 

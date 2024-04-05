@@ -36,4 +36,18 @@
   display: flex;
 }
 
+.content {
+  display: flex;
+}
+
+.restaurant-info, .menu {
+  flex: 1;
+}
+
+.menu {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
