@@ -1,5 +1,6 @@
 import logo from '../logo.png';
 import { Link } from 'react-router-dom';
+import useStatus from '../utils/useStatus';
 const Title = () => {
   return (
     <a href="/">
@@ -8,6 +9,7 @@ const Title = () => {
   );
 };
 const Header = () => {
+  const onlinestatus= useStatus();
 
   return (
 
@@ -17,6 +19,9 @@ const Header = () => {
 
         <div className="nav-items">
           <ul>
+          <li>
+            Status: {onlinestatus? "✅":"🛑" }
+            </li>  
           <li>
             <Link to="/">Home</Link> 
           </li>
