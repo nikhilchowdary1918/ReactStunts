@@ -10,7 +10,7 @@ import useStatus from "../utils/useStatus";
 
 const Body= () =>{
 
-    const{allRest,filteredData} = useFillrestcard()
+    const{allRest,filteredData,setFilteredData} = useFillrestcard()
 
     const[searchInput,setSearchInput]=useState("")
 
@@ -25,7 +25,7 @@ const Body= () =>{
       <div className="search-container">
         <input 
         type="text" 
-        className="input-search" 
+        className="input-search m-10 p-3 border border-solid border-gray-400 text-lg shadow-lg rounded-lg" 
         placeholder="search"  
         value={searchInput} 
         onChange={(e)=>{
@@ -33,21 +33,23 @@ const Body= () =>{
         }}
         />
         <button 
-        className="search-btn"
+        className="search-btn m-4 p-4 bg-green-100 rounded-lg text-black text-lg font-semibold shadow-md hover:shadow-lg hover:bg-green-200 transition duration-300 ease-in-out"
         onClick={() =>{
   
           const data = filterData(searchInput,allRest);
-          //console.log(data)
           setFilteredData(data);
         } }
         
-        >search</button>
+        >Search</button>
  
       </div>
-      <div className="restcard">
+      
+      <div className="restcard flex flex-wrap">
       {
+        
         filteredData.map((restaurant) =>{ 
           return (
+            
             restaurant.info ? <Link to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}><Restcard {...restaurant.info} /></Link> : null
         );
       })

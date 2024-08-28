@@ -24,7 +24,7 @@ const useFillrestcard=()=>{
         //setAllRest(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       }}}
     //return
-    return {allRest,filteredData};
+    return { allRest, filteredData, setFilteredData }; 
 
 }
 export default useFillrestcard;

@@ -51,3 +51,6 @@ package.json
 dist/index.7271efb6.js
 dist/index.7271efb6.js.map
 node_modules/.package-lock.json
+.postcssrc/
+tailwind.config.js
+node_modules\
