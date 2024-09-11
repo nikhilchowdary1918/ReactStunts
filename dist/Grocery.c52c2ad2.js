@@ -614,8 +614,8 @@ const Grocery = ()=>{
         children: "This is a Grocery page ,add all the groceries you wanted!!!!!!"
     }, void 0, false, {
         fileName: "src/components/Grocery.js",
-        lineNumber: 2,
-        columnNumber: 10
+        lineNumber: 3,
+        columnNumber: 5
     }, undefined);
 };
 _c = Grocery;
