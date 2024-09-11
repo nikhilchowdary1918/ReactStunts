@@ -45,6 +45,8 @@ const Body= () =>{
       </div>
       
       <div className="restcard flex flex-wrap">
+        
+
       {
         
         filteredData.map((restaurant) =>{ 
@@ -58,6 +60,7 @@ const Body= () =>{
 
       </>
     )
+
     }
 
 export default Body;
